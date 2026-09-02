@@ -27,38 +27,41 @@ export default function PartnerEcosystem({
   categories,
 }: PartnerEcosystemProps) {
   return (
-    <section className="py-24 bg-eco-cream border-t-2 border-charcoal-ink/15" id="partner-ecosystem">
+    <section className="py-24 bg-earth-canvas border-t border-charcoal-ink/10" id="partner-ecosystem">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-            <span>[ Partner Directory ]</span>
+          <div className="text-xs font-semibold uppercase tracking-widest text-earth-teal">
+            Our Non-Profit Network
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
-            The Partner Network Ecosystem
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
+            The Partner Network{' '}
+            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
+              Ecosystem
+            </span>
           </h2>
-          <p className="text-base text-charcoal-ink/75 leading-relaxed">
-            Circles of Change operates internal programs and serves as a logistical backbone for allied non-profits, schools, and civic departments.
+          <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
+            Circles of Change operates internal signature programs and serves as a logistical backbone for allied non-profits, schools, and municipal partners.
           </p>
         </div>
 
-        {/* Sammie's Buddy Bench Sub-Brand Spotlight */}
-        <div className="mb-16 bg-white border-2 border-charcoal-ink shadow-neo-lg p-8 sm:p-12">
+        {/* Sammie's Buddy Bench Spotlight (50/50 Split Media Block) */}
+        <div className="mb-16 bg-white rounded-2xl p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Photo on Left */}
-            <div className="lg:col-span-6 relative h-72 sm:h-80 border-2 border-charcoal-ink shadow-neo-sm overflow-hidden bg-sand-beige">
+            <div className="lg:col-span-6 relative h-72 sm:h-80 rounded-xl overflow-hidden bg-earth-canvas">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(/images/hero-buddy-bench.jpg)` }}
               />
             </div>
 
-            {/* Story & Sub-Brand Authorization on Right */}
+            {/* Story & Sub-Brand on Right */}
             <div className="lg:col-span-6 space-y-4">
-              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-sand-beige border border-charcoal-ink text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-                <span>Featured Partner Alliance</span>
+              <div className="text-xs font-bold uppercase tracking-wider text-earth-coral">
+                Featured Partner Alliance
               </div>
 
               <div className="pt-1">
@@ -70,21 +73,21 @@ export default function PartnerEcosystem({
                 />
               </div>
 
-              <h3 className="text-2xl font-bold font-poppins text-deep-ocean">
+              <h3 className="text-2xl sm:text-3xl font-extrabold font-poppins text-earth-dark">
                 Sammie&apos;s Circles of Change Initiative
               </h3>
 
-              <p className="text-sm text-charcoal-ink/75 leading-relaxed">
+              <p className="text-base text-charcoal-ink/75 leading-relaxed">
                 Founded by youth activist Sammie Vance, the Buddy Bench Project is a flagship partner initiative supported under the Circles of Change umbrella. We provide manufacturing partnerships, collection logistics, and 501(c)(3) sponsorship.
               </p>
 
-              <div className="flex items-center gap-6 pt-3 border-t border-charcoal-ink/15 text-xs font-mono font-semibold text-charcoal-ink/80">
+              <div className="flex items-center gap-6 pt-3 border-t border-charcoal-ink/10 text-xs font-semibold text-charcoal-ink/80">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-green" />
+                  <CheckCircle2 className="w-4 h-4 text-earth-teal" />
                   <span>350+ Benches</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-green" />
+                  <CheckCircle2 className="w-4 h-4 text-earth-teal" />
                   <span>50 States</span>
                 </div>
               </div>
@@ -93,15 +96,15 @@ export default function PartnerEcosystem({
           </div>
         </div>
 
-        {/* 3-Tier Open Directory Grid with Neo-Brutalist Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4 border-t-2 border-charcoal-ink/15">
+        {/* 3-Tier Open Directory Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map((cat, idx) => (
-            <div key={cat.category} className="space-y-6 p-6 bg-white border-2 border-charcoal-ink shadow-neo">
+            <div key={cat.category} className="space-y-6 p-8 bg-white rounded-2xl shadow-sm">
               <div className="space-y-2">
-                <div className="text-xs font-mono font-bold uppercase tracking-wider text-teal-green">
+                <div className="font-script text-earth-coral text-2xl font-bold leading-none">
                   Tier 0{idx + 1} • {cat.role}
                 </div>
-                <h3 className="text-xl font-bold font-poppins text-deep-ocean">
+                <h3 className="text-xl font-extrabold font-poppins text-earth-dark">
                   {cat.category}
                 </h3>
                 <p className="text-xs text-charcoal-ink/70 leading-relaxed">
@@ -109,17 +112,17 @@ export default function PartnerEcosystem({
                 </p>
               </div>
 
-              <div className="space-y-3 pt-4 border-t border-charcoal-ink/15">
+              <div className="space-y-3 pt-4 border-t border-charcoal-ink/10">
                 {cat.items.map((item) => (
                   <div
                     key={item.name}
-                    className="p-4 bg-eco-cream border border-charcoal-ink/30 space-y-1 hover:border-charcoal-ink hover:bg-sand-beige/40 transition-colors"
+                    className="p-4 rounded-xl bg-earth-canvas space-y-1 hover:bg-[#EAECEF] transition-colors"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-deep-ocean font-poppins">
+                      <span className="text-sm font-bold text-earth-dark font-poppins">
                         {item.name}
                       </span>
-                      <span className="text-[10px] font-mono font-bold px-2 py-0.5 bg-white border border-charcoal-ink text-charcoal-ink">
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white text-earth-teal uppercase">
                         {item.status}
                       </span>
                     </div>

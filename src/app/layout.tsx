@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Poppins, Caveat } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-caveat',
   display: 'swap',
 });
 
@@ -40,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="font-sans antialiased text-charcoal-ink bg-eco-cream flex flex-col min-h-screen">
+    <html lang="en" className={`${poppins.variable} ${caveat.variable}`}>
+      <body className="font-sans antialiased text-charcoal-ink bg-white flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow pt-20">{children}</main>
         <Footer />

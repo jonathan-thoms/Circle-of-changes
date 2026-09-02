@@ -13,12 +13,17 @@
   --color-recycled-navy: #123154;
   --color-lavender-gray: #D2D7E3;
   --color-eco-cream: #F3F1EC;
+  --color-earth-yellow: #FFD000;
+  --color-earth-coral: #E05A2B;
+  --color-earth-teal: #1B7B87;
+  --color-earth-dark: #0B0C0C;
+  --color-earth-canvas: #F4F5F6;
 }
 
 html {
   scroll-behavior: smooth;
   color: var(--color-charcoal-ink);
-  background-color: var(--color-eco-cream);
+  background-color: #FFFFFF;
 }
 
 body {
@@ -35,82 +40,74 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F3F1EC;
+  background: #F4F5F6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #317B78;
-  border-radius: 2px;
+  background: #1B7B87;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #114B5F;
 }
 
-/* Neo-Brutalist Utility Classes */
-.btn-neo-primary {
+/* EarthShare Flat Button Styles */
+.btn-earth-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   font-weight: 600;
   font-size: 0.875rem;
-  border: 2px solid #1F1F1F;
-  background-color: #114B5F;
+  border-radius: 0.375rem;
+  background-color: #0B0C0C;
   color: #FFFFFF;
-  box-shadow: 3px 3px 0px 0px #1F1F1F;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.btn-neo-primary:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px 0px #1F1F1F;
-  background-color: #317B78;
+.btn-earth-primary:hover {
+  background-color: #1B7B87;
 }
 
-.btn-neo-primary:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px 0px #1F1F1F;
-}
-
-.btn-neo-sand {
+.btn-earth-outline {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   font-weight: 600;
   font-size: 0.875rem;
-  border: 2px solid #1F1F1F;
-  background-color: #EDE4D4;
-  color: #114B5F;
-  box-shadow: 3px 3px 0px 0px #1F1F1F;
-  transition: all 0.15s ease-in-out;
+  border-radius: 0.375rem;
+  border: 1.5px solid #0B0C0C;
+  background-color: transparent;
+  color: #0B0C0C;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.btn-neo-sand:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px 0px #1F1F1F;
-  background-color: #FFFFFF;
+.btn-earth-outline:hover {
+  background-color: #0B0C0C;
+  color: #FFFFFF;
 }
 
-.btn-neo-sand:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px 0px #1F1F1F;
-}
-
-.badge-neo {
+.btn-earth-yellow {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: 1.5px solid #1F1F1F;
-  background-color: #FFFFFF;
-  color: #1F1F1F;
-  box-shadow: 2px 2px 0px 0px #1F1F1F;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  background-color: #FFD000;
+  color: #0B0C0C;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-earth-yellow:hover {
+  background-color: #FFE033;
 }

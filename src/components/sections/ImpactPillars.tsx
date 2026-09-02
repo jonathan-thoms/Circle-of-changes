@@ -28,76 +28,111 @@ export default function ImpactPillars({ pillars }: ImpactPillarsProps) {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Recycle':
-        return <Recycle className="w-5 h-5 text-deep-ocean" />;
+        return <Recycle className="w-6 h-6 text-earth-teal" />;
       case 'HeartHandshake':
-        return <HeartHandshake className="w-5 h-5 text-deep-ocean" />;
+        return <HeartHandshake className="w-6 h-6 text-earth-teal" />;
       case 'Users':
-        return <Users className="w-5 h-5 text-deep-ocean" />;
+        return <Users className="w-6 h-6 text-earth-teal" />;
       case 'Lightbulb':
-        return <Lightbulb className="w-5 h-5 text-deep-ocean" />;
+        return <Lightbulb className="w-6 h-6 text-earth-teal" />;
       default:
-        return <Recycle className="w-5 h-5 text-deep-ocean" />;
+        return <Recycle className="w-6 h-6 text-earth-teal" />;
     }
+  };
+
+  const pillarCursiveTitles: Record<string, string> = {
+    'waste-reduction': 'Circular Recovery',
+    'youth-kindness': 'School Friendship',
+    'community-action': 'Active Wellness',
+    'eco-innovation': 'Future STEM',
   };
 
   return (
     <section className="py-24 bg-white" id="impact-pillars">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Editorial Section Header */}
-        <div className="max-w-2xl mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-sand-beige border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-            <span>[ Our Core Focus ]</span>
+        {/* EarthShare "What We Offer" 50/50 Split Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 pb-16 border-b border-charcoal-ink/10">
+          
+          {/* Left: Softly Rounded Documentary Photo (EarthShare exact corner radius) */}
+          <div className="lg:col-span-6 relative h-80 sm:h-96 rounded-2xl overflow-hidden bg-earth-canvas">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(/images/hero-community.jpg)` }}
+            />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
-            Four Pillars of Circular &amp; Social Impact
-          </h2>
-          <p className="text-base text-charcoal-ink/75 leading-relaxed">
-            We bridge environmental recovery with human empathy to create measurable, self-sustaining community change.
-          </p>
+
+          {/* Right: Editorial Narrative with Coral Script Accent */}
+          <div className="lg:col-span-6 space-y-5">
+            <div className="text-xs font-semibold uppercase tracking-widest text-earth-teal">
+              What We Offer
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark leading-tight tracking-tight">
+              Empowering the Future of{' '}
+              <span className="font-script text-earth-coral text-4xl sm:text-5xl lg:text-6xl font-normal lowercase inline-block">
+                Our Communities
+              </span>
+            </h2>
+
+            <p className="text-base sm:text-lg text-charcoal-ink/80 leading-relaxed">
+              From student-led bottle cap collections to regional 5K waste drives, Circles of Change makes it easy to direct collective action toward measurable environmental solutions—quickly, transparently, and with lasting social impact.
+            </p>
+
+            <div className="pt-2">
+              <Link
+                href="/about"
+                className="btn-earth-primary"
+              >
+                <span>More About Our Model</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
         </div>
 
-        {/* Clean Open 4-Column Layout with Neo-Brutalist Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pt-8 border-t-2 border-charcoal-ink/15">
+        {/* EarthShare 4-Column Feature Row on Pale Off-White Canvas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="flex flex-col justify-between space-y-6 group p-5 bg-eco-cream/40 border-2 border-charcoal-ink/10 hover:border-charcoal-ink hover:shadow-neo hover:bg-white transition-all duration-200"
+              className="bg-earth-canvas rounded-2xl p-8 flex flex-col justify-between space-y-6 hover:bg-[#EAECEF] transition-colors duration-200"
             >
               <div className="space-y-4">
-                {/* Number Badge & Icon */}
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold px-2 py-0.5 bg-sand-beige border border-charcoal-ink shadow-neo-sm text-deep-ocean">
-                    {pillar.number}
-                  </span>
-                  <div className="p-2 border border-charcoal-ink bg-white shadow-neo-sm">
-                    {getIcon(pillar.icon)}
-                  </div>
+                {/* Icon in clean circle */}
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  {getIcon(pillar.icon)}
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold font-poppins text-deep-ocean group-hover:text-teal-green transition-colors leading-snug">
+                {/* Coral Script Subheader (EarthShare signature accent) */}
+                <div className="font-script text-earth-coral text-2xl font-bold leading-none">
+                  {pillarCursiveTitles[pillar.id] || 'Community Loop'}
+                </div>
+
+                {/* ExtraBold Title */}
+                <h3 className="text-xl font-bold font-poppins text-earth-dark leading-snug">
                   {pillar.title}
                 </h3>
 
-                {/* Concise 1-sentence description */}
+                {/* Clean 1-sentence description */}
                 <p className="text-sm text-charcoal-ink/75 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
 
-              {/* Minimalist Stat & Link */}
-              <div className="pt-6 border-t border-charcoal-ink/15 space-y-2">
-                <div className="text-2xl font-bold font-poppins text-deep-ocean">
+              {/* Bottom Stat & Link */}
+              <div className="pt-4 border-t border-charcoal-ink/10 space-y-2">
+                <div className="text-2xl font-extrabold font-poppins text-earth-dark">
                   {pillar.stat}
                 </div>
-                <div className="text-xs text-charcoal-ink/60 font-medium">
+                <div className="text-xs text-charcoal-ink/65 font-medium">
                   {pillar.statLabel}
                 </div>
                 <div className="pt-2">
                   <Link
                     href="/about"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-deep-ocean group-hover:text-teal-green underline underline-offset-4 decoration-2 decoration-teal-green transition"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-earth-teal hover:text-earth-dark transition"
                   >
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5" />

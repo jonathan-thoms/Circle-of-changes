@@ -40,42 +40,45 @@ export default function FeaturedInitiatives({
 
   return (
     <section
-      className="py-24 bg-eco-cream border-t-2 border-charcoal-ink/15"
+      className="py-24 bg-earth-canvas"
       id="featured-initiatives"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header with Script Accent */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-              <span>[ Programs in Action ]</span>
+            <div className="text-xs font-semibold uppercase tracking-widest text-earth-teal">
+              On the Frontlines of Change
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
-              Flagship Programs &amp; Partner Alliances
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
+              Flagship Programs &amp; Partner{' '}
+              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
+                Initiatives
+              </span>
             </h2>
-            <p className="text-base text-charcoal-ink/75 leading-relaxed">
-              Explore how we support independent grassroots projects and operate signature community campaigns.
+            <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
+              Discover how individuals, schools, and communities are joining together to protect our environment and build lasting connection.
             </p>
           </div>
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-deep-ocean hover:text-teal-green underline underline-offset-4 decoration-2 decoration-deep-ocean transition self-start md:self-end"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-earth-teal hover:text-earth-dark transition self-start md:self-end"
           >
-            <span>View Partner Network</span>
+            <span>View All Alliances</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* Lead Featured Showcase (Split Photo + Content with Neo-Brutalist Frame) */}
+        {/* Lead Featured Story (50/50 Split with EarthShare rounded corners) */}
         {leadInitiative && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-8 bg-white border-2 border-charcoal-ink shadow-neo-lg mb-16">
-            {/* Photo with crisp border & offset */}
-            <div className="lg:col-span-7 relative h-72 sm:h-96 border-2 border-charcoal-ink overflow-hidden bg-sand-beige shadow-neo-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-8 sm:p-12 bg-white rounded-2xl shadow-sm mb-16">
+            {/* Image */}
+            <div className="lg:col-span-7 relative h-72 sm:h-96 rounded-xl overflow-hidden bg-earth-canvas">
               {leadInitiative.image && (
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
                   style={{ backgroundImage: `url(${leadInitiative.image})` }}
                 />
               )}
@@ -83,17 +86,21 @@ export default function FeaturedInitiatives({
 
             {/* Content */}
             <div className="lg:col-span-5 space-y-5">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="px-2.5 py-0.5 bg-sand-beige border border-charcoal-ink text-xs font-mono font-bold uppercase text-deep-ocean">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-bold uppercase tracking-wider text-earth-coral">
                   {leadInitiative.type}
                 </span>
-                <span className="text-charcoal-ink/40 font-mono">•</span>
-                <span className="text-xs font-mono font-medium text-charcoal-ink/70">
+                <span className="text-charcoal-ink/30">•</span>
+                <span className="text-xs font-medium text-charcoal-ink/60">
                   {leadInitiative.location}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold font-poppins text-deep-ocean leading-tight">
+              <div className="font-script text-earth-coral text-2xl font-bold leading-none">
+                Sammie&apos;s Circles of Change
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold font-poppins text-earth-dark leading-tight">
                 {leadInitiative.title}
               </h3>
 
@@ -101,16 +108,16 @@ export default function FeaturedInitiatives({
                 {leadInitiative.description}
               </p>
 
-              {/* Neo Stats Display */}
-              <div className="grid grid-cols-2 gap-4 p-4 bg-eco-cream border border-charcoal-ink/20">
+              {/* Stats Box */}
+              <div className="flex items-center gap-8 pt-3 border-t border-charcoal-ink/10">
                 <div>
-                  <div className="text-xl font-bold text-deep-ocean font-poppins">
+                  <div className="text-2xl font-extrabold font-poppins text-earth-dark">
                     {leadInitiative.impactStat}
                   </div>
                   <div className="text-xs text-charcoal-ink/65 font-medium">Installed nationwide</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-impact-green font-poppins">
+                  <div className="text-2xl font-extrabold font-poppins text-earth-teal">
                     {leadInitiative.secondaryStat}
                   </div>
                   <div className="text-xs text-charcoal-ink/65 font-medium">Polymer diverted</div>
@@ -120,7 +127,7 @@ export default function FeaturedInitiatives({
               <div className="pt-2">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded text-xs font-bold uppercase tracking-wider text-white bg-deep-ocean hover:bg-teal-green border-2 border-charcoal-ink shadow-neo hover:shadow-neo-lg hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150"
+                  className="btn-earth-primary"
                 >
                   <span>{leadInitiative.ctaText}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -131,17 +138,17 @@ export default function FeaturedInitiatives({
         )}
 
         {/* 2-Column Companion Initiatives Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {otherInitiatives.map((item) => (
             <div
               key={item.id}
-              className="p-6 bg-white border-2 border-charcoal-ink shadow-neo hover:shadow-neo-lg transition-all duration-200 flex flex-col justify-between space-y-5 group"
+              className="p-8 bg-white rounded-2xl shadow-sm flex flex-col justify-between space-y-6 group"
             >
-              {/* Photo with crisp border */}
-              <div className="relative h-60 border-2 border-charcoal-ink overflow-hidden bg-sand-beige">
+              {/* Photo */}
+              <div className="relative h-64 rounded-xl overflow-hidden bg-earth-canvas">
                 {item.image && (
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url(${item.image})` }}
                   />
                 )}
@@ -149,16 +156,16 @@ export default function FeaturedInitiatives({
 
               {/* Text */}
               <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="px-2 py-0.5 bg-sand-beige border border-charcoal-ink text-[11px] font-mono font-bold uppercase text-deep-ocean">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold uppercase tracking-wider text-earth-teal">
                     {item.type}
                   </span>
-                  <span className="text-xs font-mono text-charcoal-ink/60">
+                  <span className="text-charcoal-ink/60">
                     {item.location}
                   </span>
                 </div>
 
-                <h4 className="text-xl font-bold font-poppins text-deep-ocean group-hover:text-teal-green transition-colors">
+                <h4 className="text-2xl font-extrabold font-poppins text-earth-dark group-hover:text-earth-teal transition-colors">
                   {item.title}
                 </h4>
 
@@ -166,13 +173,13 @@ export default function FeaturedInitiatives({
                   {item.description}
                 </p>
 
-                <div className="flex items-center justify-between pt-4 border-t border-charcoal-ink/15">
-                  <div className="text-sm font-bold font-poppins text-deep-ocean">
+                <div className="flex items-center justify-between pt-4 border-t border-charcoal-ink/10">
+                  <div className="text-lg font-bold font-poppins text-earth-dark">
                     {item.impactStat}
                   </div>
                   <Link
                     href="/about"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-deep-ocean hover:text-teal-green underline underline-offset-4 decoration-2 decoration-teal-green transition"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-earth-teal hover:text-earth-dark transition"
                   >
                     <span>{item.ctaText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />

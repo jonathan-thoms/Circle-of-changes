@@ -13,86 +13,89 @@ export default function RaceForRecyclingCallout() {
   };
 
   return (
-    <section className="py-24 bg-white border-t-2 border-charcoal-ink/15" id="race-callout">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section className="py-24 bg-deep-ocean text-white relative overflow-hidden" id="race-callout">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left: Event Story & Photo (7 Cols) */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-sand-beige border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-              <span>[ Signature Annual Event ]</span>
+          {/* Left Column: Event Story (6 Cols) */}
+          <div className="lg:col-span-6 space-y-6">
+            <div className="text-xs font-semibold uppercase tracking-widest text-sky-renewal">
+              Signature Annual Campaign
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-deep-ocean tracking-tight leading-tight">
-              Race for Recycling 5K &amp; Eco-Expo
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white tracking-tight leading-[1.15]">
+              Race for Recycling 5K &amp;{' '}
+              <span className="font-script text-earth-yellow font-normal text-4xl sm:text-6xl lg:text-7xl lowercase">
+                Eco-Expo
+              </span>
             </h2>
 
-            <p className="text-base text-charcoal-ink/75 leading-relaxed max-w-xl">
-              Turn your athletic miles into circular community infrastructure. Bring clean, sorted bottle caps or rigid plastics to offset race registration.
+            <p className="text-base sm:text-lg text-sand-beige/90 leading-relaxed max-w-xl">
+              Turn your athletic miles into circular community infrastructure. Bring clean, sorted bottle caps or rigid plastics to offset race registration and build new school benches.
             </p>
 
-            {/* Clean Event Badges */}
+            {/* Clean Event Detail Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="p-4 bg-eco-cream border-2 border-charcoal-ink shadow-neo-sm space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-charcoal-ink/70">
-                  <Calendar className="w-3.5 h-3.5 text-deep-ocean" />
+              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+                <div className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-sky-renewal font-medium">
+                  <Calendar className="w-3.5 h-3.5" />
                   <span>Date</span>
                 </div>
-                <div className="text-sm font-bold text-deep-ocean font-poppins">May 16, 2026</div>
+                <div className="text-sm font-bold text-white font-poppins">May 16, 2026</div>
               </div>
 
-              <div className="p-4 bg-eco-cream border-2 border-charcoal-ink shadow-neo-sm space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-charcoal-ink/70">
-                  <MapPin className="w-3.5 h-3.5 text-deep-ocean" />
+              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+                <div className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-sky-renewal font-medium">
+                  <MapPin className="w-3.5 h-3.5" />
                   <span>Location</span>
                 </div>
-                <div className="text-sm font-bold text-deep-ocean font-poppins">Riverside Park</div>
+                <div className="text-sm font-bold text-white font-poppins">Riverside Park</div>
               </div>
 
-              <div className="p-4 bg-eco-cream border-2 border-charcoal-ink shadow-neo-sm space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-charcoal-ink/70">
-                  <Recycle className="w-3.5 h-3.5 text-deep-ocean" />
+              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+                <div className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-sky-renewal font-medium">
+                  <Recycle className="w-3.5 h-3.5" />
                   <span>Target</span>
                 </div>
-                <div className="text-sm font-bold text-deep-ocean font-poppins">15 Tons Diverted</div>
+                <div className="text-sm font-bold text-white font-poppins">15 Tons Diverted</div>
               </div>
-            </div>
-
-            {/* Photo Thumbnail with Neo-Brutalist Border */}
-            <div className="relative h-64 border-2 border-charcoal-ink shadow-neo overflow-hidden bg-sand-beige mt-4">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(/images/hero-race-5k.jpg)` }}
-              />
             </div>
           </div>
 
-          {/* Right: Neo-Brutalist Registration Form (5 Cols) */}
-          <div className="lg:col-span-5 bg-sand-beige/50 p-8 sm:p-10 border-2 border-charcoal-ink shadow-neo-lg">
-            <div className="space-y-6">
-              <div>
-                <span className="px-2 py-0.5 bg-white border border-charcoal-ink text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
-                  Official Entry Form
-                </span>
-                <h3 className="text-2xl font-bold font-poppins text-deep-ocean mt-2">
-                  Reserve Your Spot
-                </h3>
+          {/* Right Column: EarthShare Signature Yellow-Outlined Stat Frame & Form (6 Cols) */}
+          <div className="lg:col-span-6">
+            <div className="border-2 border-earth-yellow rounded-2xl p-8 sm:p-10 bg-deep-ocean/80 backdrop-blur-md shadow-2xl space-y-6">
+              
+              {/* Stat Highlight inside Yellow Frame (EarthShare exact motif) */}
+              <div className="border-b border-white/20 pb-6 space-y-1">
+                <div className="text-xs uppercase tracking-widest text-sky-renewal font-semibold">
+                  Community Impact Target
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-script text-earth-yellow text-5xl sm:text-6xl font-bold leading-none">
+                    15+ Tons
+                  </span>
+                  <span className="text-sm text-sand-beige font-medium">
+                    Recycled Polymers to Date
+                  </span>
+                </div>
               </div>
 
+              {/* Registration Form */}
               {pledged ? (
-                <div className="p-6 bg-white border-2 border-teal-green shadow-neo text-center space-y-3">
-                  <div className="w-10 h-10 border-2 border-charcoal-ink bg-teal-green text-white mx-auto flex items-center justify-center shadow-neo-sm">
-                    <CheckCircle2 className="w-5 h-5" />
+                <div className="p-6 rounded-xl bg-white text-earth-dark text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-impact-green text-white mx-auto flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h4 className="text-lg font-bold font-poppins text-deep-ocean">
+                  <h4 className="text-xl font-bold font-poppins text-earth-dark">
                     Pledge Confirmed!
                   </h4>
-                  <p className="text-xs text-charcoal-ink/75 leading-relaxed">
-                    Thank you for pledging <strong>{pledgePounds} lbs</strong> of recyclables. Your registration details have been reserved.
+                  <p className="text-sm text-charcoal-ink/80 leading-relaxed">
+                    Thank you for pledging <strong>{pledgePounds} lbs</strong> of recyclables. Your registration slot is secured for May 16, 2026.
                   </p>
                   <button
                     onClick={() => setPledged(false)}
-                    className="text-xs font-bold text-teal-green underline underline-offset-2 pt-2 cursor-pointer"
+                    className="text-xs font-bold text-earth-teal underline pt-2 cursor-pointer"
                   >
                     Register another participant
                   </button>
@@ -100,37 +103,37 @@ export default function RaceForRecyclingCallout() {
               ) : (
                 <form onSubmit={handlePledge} className="space-y-4">
                   <div>
-                    <label className="block text-xs font-bold font-mono uppercase text-charcoal-ink/90 mb-1">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-white/90 mb-1.5">
                       Full Name
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Alex Morgan"
-                      className="w-full px-3.5 py-2.5 border-2 border-charcoal-ink bg-white text-sm text-charcoal-ink shadow-neo-sm focus:outline-none focus:bg-eco-cream transition-colors"
+                      className="w-full px-4 py-3 rounded-md bg-white text-earth-dark text-sm placeholder-charcoal-ink/50 focus:outline-none focus:ring-2 focus:ring-earth-yellow"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold font-mono uppercase text-charcoal-ink/90 mb-1">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-white/90 mb-1.5">
                       Email Address
                     </label>
                     <input
                       type="email"
                       required
                       placeholder="alex@example.com"
-                      className="w-full px-3.5 py-2.5 border-2 border-charcoal-ink bg-white text-sm text-charcoal-ink shadow-neo-sm focus:outline-none focus:bg-eco-cream transition-colors"
+                      className="w-full px-4 py-3 rounded-md bg-white text-earth-dark text-sm placeholder-charcoal-ink/50 focus:outline-none focus:ring-2 focus:ring-earth-yellow"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold font-mono uppercase text-charcoal-ink/90 mb-1">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-white/90 mb-1.5">
                       Recycling Pledge at Race Check-in
                     </label>
                     <select
                       value={pledgePounds}
                       onChange={(e) => setPledgePounds(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border-2 border-charcoal-ink bg-white text-sm text-charcoal-ink shadow-neo-sm focus:outline-none focus:bg-eco-cream transition-colors"
+                      className="w-full px-4 py-3 rounded-md bg-white text-earth-dark text-sm focus:outline-none focus:ring-2 focus:ring-earth-yellow"
                     >
                       <option value="5">5 lbs Bottle Caps / Clean Plastics</option>
                       <option value="10">10 lbs Bottle Caps (Receives Eco-Tee)</option>
@@ -141,7 +144,7 @@ export default function RaceForRecyclingCallout() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 rounded text-xs font-bold uppercase tracking-wider text-white bg-impact-green hover:bg-teal-green border-2 border-charcoal-ink shadow-neo hover:shadow-neo-lg hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 px-6 rounded-md bg-earth-yellow hover:bg-[#FFE033] text-earth-dark font-bold text-sm uppercase tracking-wider transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
                     <span>Complete Registration</span>
                     <ArrowRight className="w-4 h-4" />
@@ -149,9 +152,10 @@ export default function RaceForRecyclingCallout() {
                 </form>
               )}
 
-              <div className="text-center text-xs font-mono text-charcoal-ink/65 pt-2">
-                All proceeds fund local plastic micro-hubs &amp; buddy benches.
+              <div className="text-center text-xs text-sand-beige/70">
+                100% of proceeds fund local plastic micro-hubs &amp; student buddy benches.
               </div>
+
             </div>
           </div>
 
