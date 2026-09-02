@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Users,
   ArrowRight,
-  CheckCircle2,
 } from 'lucide-react';
 import { getPartnerEcosystem } from '@/lib/api';
 import ImpactCConcept from '@/components/about/ImpactCConcept';
@@ -54,31 +53,31 @@ export default async function AboutPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(/images/about-landscape.jpg)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-ocean/95 via-deep-ocean/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-ocean/95 via-deep-ocean/70 to-black/35" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-white space-y-4">
-          <div className="text-xs font-semibold uppercase tracking-widest text-sky-renewal">
-            Our Story &amp; Purpose
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/40 border-1.5 border-white/70 shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-sky-renewal">
+            <span>[ Our Story &amp; Purpose ]</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-poppins text-white tracking-tight max-w-3xl leading-tight">
             Connecting People, Plastics &amp; Public Spaces
           </h1>
 
-          <p className="text-base sm:text-lg text-sand-beige/90 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg text-sand-beige/95 max-w-2xl leading-relaxed">
             Circles of Change was founded on a simple truth: environmental sustainability and human empathy are two arcs of the very same circle.
           </p>
         </div>
       </section>
 
-      {/* 2. Concise Mission Narrative with Photo */}
+      {/* 2. Concise Mission Narrative with Neo-Brutalist Framed Photo */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-6 space-y-6">
-              <div className="text-xs font-semibold uppercase tracking-widest text-teal-green">
-                Our Narrative
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-sand-beige border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
+                <span>[ Our Narrative ]</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
@@ -93,23 +92,23 @@ export default async function AboutPage() {
                 Circles of Change bridged these silos by creating a collaborative backbone inspired by EarthShare&apos;s non-profit ecosystem. When youth leaders like Sammie Vance needed manufacturing infrastructure to turn bottle caps into Buddy Benches, Circles of Change provided the collection drives, processing logistics, and non-profit sponsorship.
               </p>
 
-              <div className="flex items-center gap-8 pt-4 border-t border-charcoal-ink/10">
+              <div className="grid grid-cols-2 gap-4 p-4 bg-eco-cream border-2 border-charcoal-ink shadow-neo-sm">
                 <div>
                   <div className="text-3xl font-bold text-deep-ocean font-poppins">
                     250K+ lbs
                   </div>
-                  <div className="text-xs text-charcoal-ink/60">Plastic diverted</div>
+                  <div className="text-xs font-mono text-charcoal-ink/70 uppercase">Plastic diverted</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-teal-green font-poppins">
                     350+
                   </div>
-                  <div className="text-xs text-charcoal-ink/60">School buddy benches</div>
+                  <div className="text-xs font-mono text-charcoal-ink/70 uppercase">School buddy benches</div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative h-80 sm:h-96 rounded-lg overflow-hidden bg-sand-beige">
+            <div className="lg:col-span-6 relative h-80 sm:h-96 border-2 border-charcoal-ink shadow-neo-lg overflow-hidden bg-sand-beige">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(/images/plastic-sorting.jpg)` }}
@@ -126,12 +125,12 @@ export default async function AboutPage() {
       {/* 4. Partner Network Ecosystem */}
       <PartnerEcosystem categories={partnerCategories} />
 
-      {/* 5. Core Values (Clean Open Grid) */}
-      <section className="py-24 bg-white border-t border-charcoal-ink/10" id="values">
+      {/* 5. Core Values with Neo-Brutalist Framing */}
+      <section className="py-24 bg-white border-t-2 border-charcoal-ink/15" id="values">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-16 space-y-3">
-            <div className="text-xs font-semibold uppercase tracking-widest text-teal-green">
-              Guiding Principles
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-sand-beige border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
+              <span>[ Guiding Principles ]</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
               Values Rooted in Action
@@ -141,10 +140,10 @@ export default async function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 border-t border-charcoal-ink/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t-2 border-charcoal-ink/15">
             {coreValues.map((val) => (
-              <div key={val.title} className="space-y-3">
-                <div className="w-10 h-10 rounded-full bg-sand-beige/40 flex items-center justify-center text-teal-green">
+              <div key={val.title} className="p-6 bg-eco-cream border-2 border-charcoal-ink shadow-neo space-y-3">
+                <div className="w-10 h-10 border border-charcoal-ink bg-white shadow-neo-sm flex items-center justify-center text-deep-ocean">
                   {React.createElement(val.icon, { className: 'w-5 h-5' })}
                 </div>
                 <h3 className="text-lg font-bold font-poppins text-deep-ocean">
@@ -160,26 +159,27 @@ export default async function AboutPage() {
       </section>
 
       {/* 6. Clean Minimalist Action Banner */}
-      <section className="py-20 bg-deep-ocean text-white">
+      <section className="py-20 bg-deep-ocean text-white border-t-2 border-charcoal-ink">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-white tracking-tight">
             Ready to Join the Circle?
           </h2>
-          <p className="text-sand-beige/90 text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-sand-beige/95 text-base max-w-xl mx-auto leading-relaxed">
             Whether you are a school looking to place a Buddy Bench, a runner gearing up for the 5K, or a partner non-profit—connect with us today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
-              href="/#race-callout"
-              className="px-7 py-3.5 rounded-full text-sm font-semibold text-deep-ocean bg-sand-beige hover:bg-white transition shadow-sm"
+              href="/"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded text-xs font-bold uppercase tracking-wider text-deep-ocean bg-sand-beige border-2 border-white shadow-neo-white hover:shadow-neo-white-lg hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150"
             >
-              Register for 5K Race
+              <span>Register for 5K Race</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/#featured-initiatives"
-              className="px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-teal-green hover:bg-impact-green transition shadow-sm"
+              href="/"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded text-xs font-bold uppercase tracking-wider text-white bg-black/40 hover:bg-white hover:text-deep-ocean border-2 border-white shadow-neo-sm hover:shadow-neo-white hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150"
             >
-              Explore Initiatives
+              <span>Explore Initiatives</span>
             </Link>
           </div>
         </div>

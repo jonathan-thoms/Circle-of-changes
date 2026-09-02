@@ -40,24 +40,77 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #317B78;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #114B5F;
 }
 
-/* Glassmorphism helpers */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(210, 215, 227, 0.6);
+/* Neo-Brutalist Utility Classes */
+.btn-neo-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid #1F1F1F;
+  background-color: #114B5F;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 0px 0px #1F1F1F;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
 }
 
-.glass-panel-dark {
-  background: rgba(17, 75, 95, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(163, 217, 255, 0.2);
+.btn-neo-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px #1F1F1F;
+  background-color: #317B78;
+}
+
+.btn-neo-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #1F1F1F;
+}
+
+.btn-neo-sand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid #1F1F1F;
+  background-color: #EDE4D4;
+  color: #114B5F;
+  box-shadow: 3px 3px 0px 0px #1F1F1F;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-neo-sand:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px #1F1F1F;
+  background-color: #FFFFFF;
+}
+
+.btn-neo-sand:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #1F1F1F;
+}
+
+.badge-neo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1.5px solid #1F1F1F;
+  background-color: #FFFFFF;
+  color: #1F1F1F;
+  box-shadow: 2px 2px 0px 0px #1F1F1F;
 }

@@ -7,7 +7,6 @@ import {
   Recycle,
   Heart,
   Repeat,
-  ArrowRight,
 } from 'lucide-react';
 
 export default function ImpactCConcept() {
@@ -52,13 +51,13 @@ export default function ImpactCConcept() {
   ];
 
   return (
-    <section className="py-24 bg-white border-t border-charcoal-ink/10" id="impact-c">
+    <section className="py-24 bg-white border-t-2 border-charcoal-ink/15" id="impact-c">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="max-w-2xl mb-16 space-y-3">
-          <div className="text-xs font-semibold uppercase tracking-widest text-teal-green">
-            Our Model
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-sand-beige border-1.5 border-charcoal-ink shadow-neo-sm text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
+            <span>[ Our Impact Framework ]</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-deep-ocean tracking-tight">
             The &ldquo;Impact C&rdquo; Framework
@@ -68,8 +67,8 @@ export default function ImpactCConcept() {
           </p>
         </div>
 
-        {/* Horizontal Step Progression (EarthShare Clean Minimalist Style) */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 pt-4 border-t border-charcoal-ink/10">
+        {/* Horizontal Step Progression with Neo-Brutalist Tactile Tabs */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 pt-4 border-t-2 border-charcoal-ink/15">
           {steps.map((step, idx) => {
             const isSelected = idx === activeStep;
             return (
@@ -77,17 +76,17 @@ export default function ImpactCConcept() {
                 key={step.number}
                 type="button"
                 onClick={() => setActiveStep(idx)}
-                className={`text-left p-4 rounded-lg transition-all duration-200 cursor-pointer space-y-3 ${
+                className={`text-left p-5 border-2 border-charcoal-ink transition-all duration-150 cursor-pointer space-y-3 ${
                   isSelected
-                    ? 'bg-sand-beige/40 border-l-2 border-teal-green'
-                    : 'hover:bg-sand-beige/20 border-l-2 border-transparent'
+                    ? 'bg-sand-beige shadow-neo-ocean -translate-y-1'
+                    : 'bg-eco-cream/50 shadow-neo-sm hover:shadow-neo hover:bg-white hover:-translate-y-0.5'
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-teal-green font-poppins">
+                  <span className="font-mono text-xs font-bold px-2 py-0.5 bg-white border border-charcoal-ink text-deep-ocean">
                     {step.number}
                   </span>
-                  {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-teal-green" />}
+                  {isSelected && <span className="w-2.5 h-2.5 bg-deep-ocean border border-charcoal-ink" />}
                 </div>
 
                 <h3 className="text-base font-bold font-poppins text-deep-ocean">
@@ -102,13 +101,13 @@ export default function ImpactCConcept() {
           })}
         </div>
 
-        {/* Selected Step Spotlight Banner */}
-        <div className="mt-12 p-8 sm:p-10 bg-eco-cream rounded-xl border border-charcoal-ink/10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        {/* Selected Step Spotlight Drawer */}
+        <div className="mt-10 p-8 sm:p-10 bg-eco-cream border-2 border-charcoal-ink shadow-neo-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="text-xs font-semibold uppercase tracking-wider text-teal-green">
-              Phase {steps[activeStep].number} Spotlight • {steps[activeStep].title}
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-white border border-charcoal-ink text-xs font-mono font-bold uppercase tracking-wider text-deep-ocean">
+              <span>Phase {steps[activeStep].number} Spotlight • {steps[activeStep].title}</span>
             </div>
-            <p className="text-base text-deep-ocean font-medium leading-relaxed">
+            <p className="text-lg text-deep-ocean font-semibold leading-relaxed pt-1">
               {steps[activeStep].detail}
             </p>
           </div>
@@ -117,14 +116,14 @@ export default function ImpactCConcept() {
             <button
               type="button"
               onClick={() => setActiveStep((prev) => (prev - 1 + steps.length) % steps.length)}
-              className="px-4 py-2 text-xs font-semibold text-charcoal-ink/70 hover:text-deep-ocean border border-charcoal-ink/20 rounded-full transition"
+              className="px-4 py-2 text-xs font-bold font-mono uppercase text-charcoal-ink bg-white border-2 border-charcoal-ink shadow-neo-sm hover:shadow-neo hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150 cursor-pointer"
             >
-              Previous Phase
+              Prev Phase
             </button>
             <button
               type="button"
               onClick={() => setActiveStep((prev) => (prev + 1) % steps.length)}
-              className="px-4 py-2 text-xs font-semibold text-white bg-deep-ocean hover:bg-teal-green rounded-full transition"
+              className="px-5 py-2 text-xs font-bold font-mono uppercase text-white bg-deep-ocean border-2 border-charcoal-ink shadow-neo-sm hover:shadow-neo hover:bg-teal-green hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all duration-150 cursor-pointer"
             >
               Next Phase →
             </button>
