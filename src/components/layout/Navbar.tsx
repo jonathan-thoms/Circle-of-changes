@@ -26,6 +26,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
+    { name: "Sammie's Buddy Bench", href: '/initiatives/sammies-buddy-bench' },
   ];
 
   const isActive = (href: string) => {
