@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-deep-ocean: #114B5F;
+  --color-teal-green: #317B78;
+  --color-sky-renewal: #A3D9FF;
+  --color-sand-beige: #EDE4D4;
+  --color-charcoal-ink: #1F1F1F;
+  --color-impact-green: #1A7F5A;
+  --color-regen-mint: #9FE7C1;
+  --color-recycled-navy: #123154;
+  --color-lavender-gray: #D2D7E3;
+  --color-eco-cream: #F3F1EC;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--color-charcoal-ink);
+  background-color: var(--color-eco-cream);
+}
+
+body {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F1EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #317B78;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #114B5F;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(210, 215, 227, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(17, 75, 95, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(163, 217, 255, 0.2);
+}
