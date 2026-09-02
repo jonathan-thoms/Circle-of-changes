@@ -60,6 +60,16 @@ export default function RaceForRecyclingCallout() {
                 <div className="text-sm font-bold text-white font-poppins">15 Tons Diverted</div>
               </div>
             </div>
+
+            <div className="pt-2">
+              <a
+                href="/race-for-recycling-5k"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-earth-yellow hover:bg-[#FFE033] text-earth-dark font-bold text-xs uppercase tracking-wider transition shadow-sm"
+              >
+                <span>View All Sponsorship Packages ($500 - $10k)</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Right Column: EarthShare Signature Yellow-Outlined Stat Frame & Form (6 Cols) */}

@@ -27,6 +27,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: "Sammie's Buddy Bench", href: '/initiatives/sammies-buddy-bench' },
+    { name: 'Race 5K & Sponsors', href: '/race-for-recycling-5k' },
   ];
 
   const isActive = (href: string) => {
@@ -51,7 +52,7 @@ export default function Navbar() {
           </div>
 
           {/* Center Navigation Links (EarthShare Style) */}
-          <nav className="hidden md:flex items-center space-x-2 lg:space-x-8">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -79,10 +80,10 @@ export default function Navbar() {
               Get Involved
             </Link>
             <Link
-              href="/#race-callout"
+              href="/race-for-recycling-5k"
               className="px-4 py-2 rounded-md bg-earth-dark hover:bg-earth-teal text-xs font-bold text-white transition-colors duration-200 flex items-center gap-1.5 shadow-sm"
             >
-              <span>Join the Circle</span>
+              <span>Race 5K &amp; Expo</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

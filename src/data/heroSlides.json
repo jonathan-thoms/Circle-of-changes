@@ -59,12 +59,12 @@
     "titleHighlight": "Race for Recycling 5K",
     "description": "Join thousands of runners and eco-advocates turning athletic miles into local plastic collection and community cleanups.",
     "primaryCta": {
-      "text": "Register for the 5K",
-      "href": "#race-callout"
+      "text": "Race 5K & Sponsors",
+      "href": "/race-for-recycling-5k"
     },
     "secondaryCta": {
-      "text": "Pledge Recyclables",
-      "href": "#race-callout"
+      "text": "Sponsorship Levels",
+      "href": "/race-for-recycling-5k#sponsorship-packages"
     },
     "statBadge": {
       "value": "1,200+ Runners",
