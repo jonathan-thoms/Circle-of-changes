@@ -35,12 +35,12 @@
     "titleHighlight": "Benches of Kindness",
     "description": "Students collect plastic bottle caps that get remanufactured into 100% recycled benches, fostering schoolyard friendship.",
     "primaryCta": {
-      "text": "Learn About Buddy Benches",
-      "href": "/about#partner-ecosystem"
+      "text": "Explore Sammie's Initiative",
+      "href": "/initiatives/sammies-buddy-bench"
     },
     "secondaryCta": {
-      "text": "Start a Collection",
-      "href": "#featured-initiatives"
+      "text": "How It Works",
+      "href": "/initiatives/sammies-buddy-bench#how-it-works"
     },
     "statBadge": {
       "value": "350+ Benches",

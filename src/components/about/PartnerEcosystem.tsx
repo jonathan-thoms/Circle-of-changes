@@ -68,7 +68,7 @@ export default function PartnerEcosystem({
                 <Logo
                   variant="subbrand-sammie"
                   size="lg"
-                  href="/about"
+                  href="/initiatives/sammies-buddy-bench"
                   ariaLabel="Sammie's Circles of Change Initiative"
                 />
               </div>
@@ -81,15 +81,25 @@ export default function PartnerEcosystem({
                 Founded by youth activist Sammie Vance, the Buddy Bench Project is a flagship partner initiative supported under the Circles of Change umbrella. We provide manufacturing partnerships, collection logistics, and 501(c)(3) sponsorship.
               </p>
 
-              <div className="flex items-center gap-6 pt-3 border-t border-charcoal-ink/10 text-xs font-semibold text-charcoal-ink/80">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-earth-teal" />
-                  <span>350+ Benches</span>
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-charcoal-ink/10">
+                <div className="flex items-center gap-6 text-xs font-semibold text-charcoal-ink/80">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-earth-teal" />
+                    <span>350+ Benches</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-earth-teal" />
+                    <span>50 States</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-earth-teal" />
-                  <span>50 States</span>
-                </div>
+
+                <Link
+                  href="/initiatives/sammies-buddy-bench"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-earth-teal hover:text-earth-dark transition"
+                >
+                  <span>Explore Dedicated Page</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
 

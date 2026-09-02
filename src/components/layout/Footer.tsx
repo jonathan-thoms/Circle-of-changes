@@ -77,7 +77,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition">
+                <Link href="/initiatives/sammies-buddy-bench" className="hover:text-white transition">
                   Sammie&apos;s Buddy Bench Project
                 </Link>
               </li>

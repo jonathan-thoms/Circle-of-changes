@@ -126,7 +126,7 @@ export default function FeaturedInitiatives({
 
               <div className="pt-2">
                 <Link
-                  href="/about"
+                  href={leadInitiative.ctaHref || '/initiatives/sammies-buddy-bench'}
                   className="btn-earth-primary"
                 >
                   <span>{leadInitiative.ctaText}</span>
