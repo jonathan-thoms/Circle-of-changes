@@ -61,70 +61,84 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Center Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
+          {/* Center Navigation Links with Animated Underline and Hover/Click Effects */}
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-4">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-1.5 text-sm font-semibold transition-colors duration-200 ${
+                  className={`relative group px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all duration-200 cursor-pointer active:scale-95 ${
                     isTransparent
                       ? active
-                        ? 'text-earth-yellow font-bold border-b-2 border-earth-yellow drop-shadow-sm'
-                        : 'text-white/90 hover:text-white drop-shadow-sm'
+                        ? 'text-earth-yellow font-bold'
+                        : 'text-white/90 hover:text-white hover:bg-white/10'
                       : active
-                        ? 'text-earth-teal font-bold border-b-2 border-earth-teal'
-                        : 'text-charcoal-ink/80 hover:text-earth-teal'
+                        ? 'text-earth-teal font-bold'
+                        : 'text-charcoal-ink/80 hover:text-earth-teal hover:bg-earth-canvas'
                   }`}
                 >
-                  {link.name}
+                  <span className="relative inline-block transition-transform duration-200 group-hover:-translate-y-0.5">
+                    {link.name}
+                    {/* Sliding / Expanding Underline Micro-Interaction */}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-[2px] rounded-full transition-all duration-300 ease-out ${
+                        active
+                          ? isTransparent
+                            ? 'w-full bg-earth-yellow shadow-[0_0_8px_rgba(255,208,0,0.6)]'
+                            : 'w-full bg-earth-teal'
+                          : isTransparent
+                            ? 'w-0 group-hover:w-full bg-earth-yellow'
+                            : 'w-0 group-hover:w-full bg-earth-teal'
+                      }`}
+                    />
+                  </span>
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right Dual Action CTAs */}
+          {/* Right Dual Action CTAs with Hover Lift and Tactile Click */}
           <div className="hidden md:flex items-center space-x-3">
             <Link
               href="/about"
-              className={`px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 ${
+              className={`px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 cursor-pointer active:scale-95 hover:scale-105 ${
                 isTransparent
-                  ? 'border border-white/60 hover:border-white text-white hover:bg-white/15 drop-shadow-sm'
-                  : 'border border-charcoal-ink/30 hover:border-charcoal-ink text-charcoal-ink hover:bg-charcoal-ink/5'
+                  ? 'border border-white/60 hover:border-white text-white hover:bg-white/15 drop-shadow-sm hover:shadow-sm'
+                  : 'border border-charcoal-ink/30 hover:border-charcoal-ink text-charcoal-ink hover:bg-charcoal-ink/5 hover:shadow-sm'
               }`}
             >
               Get Involved
             </Link>
             <Link
               href="/race-for-recycling-5k"
-              className={`px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 flex items-center gap-1.5 shadow-sm ${
+              className={`group px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 flex items-center gap-1.5 cursor-pointer active:scale-95 hover:scale-105 shadow-sm hover:shadow-md ${
                 isTransparent
-                  ? 'bg-earth-yellow hover:bg-[#FFE033] text-earth-dark shadow-md'
-                  : 'bg-earth-dark hover:bg-earth-teal text-white shadow-sm'
+                  ? 'bg-earth-yellow hover:bg-[#FFE033] text-earth-dark'
+                  : 'bg-earth-dark hover:bg-earth-teal text-white'
               }`}
             >
               <span>Race 5K &amp; Expo</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button with Tactile Feedback */}
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className={`p-2 transition-colors duration-200 focus:outline-none cursor-pointer ${
+              className={`p-2 rounded-md transition-all duration-200 focus:outline-none cursor-pointer active:scale-90 hover:scale-105 ${
                 isTransparent
-                  ? 'text-white hover:text-earth-yellow'
-                  : 'text-charcoal-ink hover:text-earth-teal'
+                  ? 'text-white hover:text-earth-yellow hover:bg-white/10'
+                  : 'text-charcoal-ink hover:text-earth-teal hover:bg-earth-canvas'
               }`}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 transition-transform duration-200 rotate-90" />
               ) : (
                 <Menu className="w-6 h-6" />
               )}
@@ -144,10 +158,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3 py-2.5 text-base font-bold transition-colors ${
+                  className={`px-4 py-2.5 rounded-lg text-base font-bold transition-all duration-150 active:scale-98 ${
                     active
-                      ? 'text-earth-teal bg-earth-canvas rounded-md'
-                      : 'text-charcoal-ink hover:text-earth-teal'
+                      ? 'text-earth-teal bg-earth-canvas'
+                      : 'text-charcoal-ink hover:text-earth-teal hover:bg-earth-canvas/60'
                   }`}
                 >
                   {link.name}
@@ -160,14 +174,14 @@ export default function Navbar() {
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 px-4 rounded-md border border-charcoal-ink text-center text-xs font-bold text-charcoal-ink"
+              className="w-full py-2.5 px-4 rounded-md border border-charcoal-ink text-center text-xs font-bold text-charcoal-ink transition-transform active:scale-95"
             >
               Get Involved
             </Link>
             <Link
               href="/race-for-recycling-5k"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 px-4 rounded-md bg-earth-dark text-center text-xs font-bold text-white flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 px-4 rounded-md bg-earth-dark text-center text-xs font-bold text-white flex items-center justify-center gap-1.5 transition-transform active:scale-95"
             >
               <span>Race 5K &amp; Expo</span>
               <ArrowRight className="w-3.5 h-3.5" />

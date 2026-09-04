@@ -122,12 +122,6 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl text-white space-y-6">
           
-          {/* Minimalist Category Eyebrow */}
-          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/90">
-            <span className="w-2 h-2 rounded-full bg-earth-yellow" />
-            <span>{currentSlide.badge.text}</span>
-          </div>
-
           {/* ExtraBold Headline with EarthShare Yellow Script Word */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white leading-[1.12] tracking-tight">
             {currentSlide.title}{' '}
