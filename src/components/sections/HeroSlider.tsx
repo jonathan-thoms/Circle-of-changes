@@ -93,7 +93,7 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
   return (
     <section
-      className="relative min-h-[620px] lg:min-h-[740px] flex items-end pb-16 lg:pb-24 overflow-hidden bg-earth-dark select-none"
+      className="relative min-h-[640px] lg:min-h-[760px] flex items-end pt-24 sm:pt-28 pb-16 lg:pb-24 overflow-hidden bg-earth-dark select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Featured Environmental Initiatives"

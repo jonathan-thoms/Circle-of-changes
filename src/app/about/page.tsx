@@ -52,7 +52,7 @@ export default async function AboutPage() {
     <div className="flex flex-col min-h-screen">
       
       {/* 1. Full-Bleed Photo Hero (EarthShare Style) */}
-      <section className="relative min-h-[500px] lg:min-h-[580px] flex items-end pb-16 overflow-hidden bg-earth-dark select-none">
+      <section className="relative min-h-[520px] lg:min-h-[600px] flex items-end pt-24 sm:pt-28 pb-16 overflow-hidden bg-earth-dark select-none">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(/images/about-landscape.jpg)` }}

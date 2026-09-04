@@ -7,7 +7,7 @@ import { ArrowRight, Download, Heart, Users, MapPin, Sparkles } from 'lucide-rea
 
 export default function SammieHero() {
   return (
-    <section className="relative min-h-[640px] lg:min-h-[720px] flex items-end pb-16 lg:pb-20 overflow-hidden bg-earth-dark select-none">
+    <section className="relative min-h-[660px] lg:min-h-[740px] flex items-end pt-24 sm:pt-28 pb-16 lg:pb-20 overflow-hidden bg-earth-dark select-none">
       {/* Background Image with Dark Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out scale-105"

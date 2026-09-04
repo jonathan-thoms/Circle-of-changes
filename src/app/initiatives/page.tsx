@@ -17,7 +17,7 @@ export default async function InitiativesDirectoryPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[440px] lg:min-h-[500px] flex items-end pb-16 overflow-hidden bg-earth-dark select-none">
+      <section className="relative min-h-[460px] lg:min-h-[520px] flex items-end pt-24 sm:pt-28 pb-16 overflow-hidden bg-earth-dark select-none">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(/images/hero-community.jpg)` }}

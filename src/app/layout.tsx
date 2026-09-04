@@ -50,7 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${caveat.variable}`}>
       <body className="font-sans antialiased text-charcoal-ink bg-white flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-20">{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
