@@ -13,13 +13,16 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Transition from transparent to white background on scrolling down past 20px
       if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    // Initialize immediately on mount
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,23 +38,30 @@ export default function Navbar() {
     return pathname.startsWith(href) && href !== '/';
   };
 
+  // Header is transparent at top when mobile menu is closed
+  const isTransparent = !isScrolled && !mobileMenuOpen;
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        isScrolled
-          ? 'bg-white/98 shadow-sm py-3.5 border-b border-charcoal-ink/10'
-          : 'bg-white/95 py-4 border-b border-charcoal-ink/10'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+        isTransparent
+          ? 'bg-transparent border-b border-transparent py-4 sm:py-5'
+          : 'bg-white/98 shadow-md border-b border-charcoal-ink/10 py-3 sm:py-3.5 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo */}
+          {/* Logo - Automatically switches between light (transparent) and dark (white) */}
           <div className="flex items-center">
-            <Logo variant="color" size="md" />
+            <Logo
+              variant={isTransparent ? 'white' : 'color'}
+              onDark={isTransparent}
+              size="md"
+            />
           </div>
 
-          {/* Center Navigation Links (EarthShare Style) */}
+          {/* Center Navigation Links */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -60,9 +70,13 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`px-3 py-1.5 text-sm font-semibold transition-colors duration-200 ${
-                    active
-                      ? 'text-earth-teal font-bold border-b-2 border-earth-teal'
-                      : 'text-charcoal-ink/80 hover:text-earth-teal'
+                    isTransparent
+                      ? active
+                        ? 'text-earth-yellow font-bold border-b-2 border-earth-yellow drop-shadow-sm'
+                        : 'text-white/90 hover:text-white drop-shadow-sm'
+                      : active
+                        ? 'text-earth-teal font-bold border-b-2 border-earth-teal'
+                        : 'text-charcoal-ink/80 hover:text-earth-teal'
                   }`}
                 >
                   {link.name}
@@ -71,17 +85,25 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Dual Action CTAs (Matching EarthShare Outline + Solid) */}
+          {/* Right Dual Action CTAs */}
           <div className="hidden md:flex items-center space-x-3">
             <Link
               href="/about"
-              className="px-4 py-2 rounded-md border border-charcoal-ink/30 hover:border-charcoal-ink text-xs font-bold text-charcoal-ink transition-colors duration-200"
+              className={`px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 ${
+                isTransparent
+                  ? 'border border-white/60 hover:border-white text-white hover:bg-white/15 drop-shadow-sm'
+                  : 'border border-charcoal-ink/30 hover:border-charcoal-ink text-charcoal-ink hover:bg-charcoal-ink/5'
+              }`}
             >
               Get Involved
             </Link>
             <Link
               href="/race-for-recycling-5k"
-              className="px-4 py-2 rounded-md bg-earth-dark hover:bg-earth-teal text-xs font-bold text-white transition-colors duration-200 flex items-center gap-1.5 shadow-sm"
+              className={`px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 flex items-center gap-1.5 shadow-sm ${
+                isTransparent
+                  ? 'bg-earth-yellow hover:bg-[#FFE033] text-earth-dark shadow-md'
+                  : 'bg-earth-dark hover:bg-earth-teal text-white shadow-sm'
+              }`}
             >
               <span>Race 5K &amp; Expo</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -93,7 +115,11 @@ export default function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2 text-charcoal-ink focus:outline-none cursor-pointer"
+              className={`p-2 transition-colors duration-200 focus:outline-none cursor-pointer ${
+                isTransparent
+                  ? 'text-white hover:text-earth-yellow'
+                  : 'text-charcoal-ink hover:text-earth-teal'
+              }`}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -139,11 +165,11 @@ export default function Navbar() {
               Get Involved
             </Link>
             <Link
-              href="/#race-callout"
+              href="/race-for-recycling-5k"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-2.5 px-4 rounded-md bg-earth-dark text-center text-xs font-bold text-white flex items-center justify-center gap-1.5"
             >
-              <span>Join the Circle</span>
+              <span>Race 5K &amp; Expo</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
