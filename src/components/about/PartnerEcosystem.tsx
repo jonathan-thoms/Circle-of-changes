@@ -106,14 +106,11 @@ export default function PartnerEcosystem({
           </div>
         </div>
 
-        {/* 3-Tier Open Directory Grid */}
+        {/* 3-Column Open Directory Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {categories.map((cat, idx) => (
+          {categories.map((cat) => (
             <div key={cat.category} className="space-y-6 p-8 bg-white rounded-2xl shadow-sm">
               <div className="space-y-2">
-                <div className="font-script text-earth-coral text-2xl font-bold leading-none">
-                  Tier 0{idx + 1} • {cat.role}
-                </div>
                 <h3 className="text-xl font-extrabold font-poppins text-earth-dark">
                   {cat.category}
                 </h3>

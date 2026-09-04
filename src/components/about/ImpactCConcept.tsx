@@ -1,18 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Sparkles,
   Layers,
   Recycle,
   Heart,
   Repeat,
-  ArrowRight,
 } from 'lucide-react';
 
 export default function ImpactCConcept() {
-  const [activeStep, setActiveStep] = useState(0);
-
   const steps = [
     {
       number: '01',
@@ -78,63 +75,24 @@ export default function ImpactCConcept() {
 
         {/* 5-Step Horizontal Progression Row (EarthShare Style) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 pt-4">
-          {steps.map((step, idx) => {
-            const isSelected = idx === activeStep;
-            return (
-              <button
-                key={step.number}
-                type="button"
-                onClick={() => setActiveStep(idx)}
-                className={`text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer space-y-3 ${
-                  isSelected
-                    ? 'bg-earth-dark text-white shadow-md'
-                    : 'bg-earth-canvas text-charcoal-ink hover:bg-[#EAECEF]'
-                }`}
-              >
-                <div className="font-script text-2xl font-bold leading-none text-earth-coral">
-                  Step {step.number}
-                </div>
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="text-left p-6 rounded-2xl bg-earth-canvas hover:bg-[#EAECEF] transition-all duration-200 space-y-3 shadow-xs"
+            >
+              <div className="font-script text-2xl font-bold leading-none text-earth-coral">
+                Step {step.number}
+              </div>
 
-                <h3 className="text-base font-bold font-poppins leading-tight">
-                  {step.title}
-                </h3>
+              <h3 className="text-base font-bold font-poppins text-earth-dark leading-tight">
+                {step.title}
+              </h3>
 
-                <p className={`text-xs leading-relaxed ${isSelected ? 'text-white/80' : 'text-charcoal-ink/70'}`}>
-                  {step.summary}
-                </p>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Selected Step Spotlight Drawer */}
-        <div className="mt-8 p-8 sm:p-10 rounded-2xl bg-earth-canvas flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-2xl">
-            <div className="text-xs font-semibold uppercase tracking-wider text-earth-teal">
-              Phase {steps[activeStep].number} In Detail • {steps[activeStep].title}
+              <p className="text-xs leading-relaxed text-charcoal-ink/75">
+                {step.summary}
+              </p>
             </div>
-            <p className="text-lg sm:text-xl text-earth-dark font-medium leading-relaxed">
-              {steps[activeStep].detail}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-3 self-start md:self-auto">
-            <button
-              type="button"
-              onClick={() => setActiveStep((prev) => (prev - 1 + steps.length) % steps.length)}
-              className="px-4 py-2.5 rounded-md border border-charcoal-ink/30 hover:border-charcoal-ink text-xs font-bold text-earth-dark bg-white transition"
-            >
-              Previous Phase
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveStep((prev) => (prev + 1) % steps.length)}
-              className="px-5 py-2.5 rounded-md bg-earth-dark hover:bg-earth-teal text-xs font-bold text-white transition flex items-center gap-1.5"
-            >
-              <span>Next Phase</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
+          ))}
         </div>
 
       </div>
