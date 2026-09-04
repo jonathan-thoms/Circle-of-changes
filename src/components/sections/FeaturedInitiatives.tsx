@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -86,23 +87,16 @@ export default function FeaturedInitiatives({
 
             {/* Content */}
             <div className="lg:col-span-5 space-y-5">
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-earth-coral">
-                  {leadInitiative.type}
-                </span>
-                <span className="text-charcoal-ink/30">•</span>
-                <span className="text-xs font-medium text-charcoal-ink/60">
-                  {leadInitiative.location}
-                </span>
+              {/* Dedicated Initiative Branding Logo */}
+              <div className="relative w-64 sm:w-72 h-16 sm:h-20">
+                <Image
+                  src="/images/Sammie_s COC-black.png"
+                  alt="Sammie's Circles of Change"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
               </div>
-
-              <div className="font-script text-earth-coral text-2xl font-bold leading-none">
-                Sammie&apos;s Circles of Change
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-poppins text-earth-dark leading-tight">
-                {leadInitiative.title}
-              </h3>
 
               <p className="text-base text-charcoal-ink/75 leading-relaxed">
                 {leadInitiative.description}
