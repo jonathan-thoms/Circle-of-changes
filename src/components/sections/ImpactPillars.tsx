@@ -65,7 +65,7 @@ export default function ImpactPillars({ pillars }: ImpactPillarsProps) {
           {/* Right: Editorial Narrative with Coral Script Accent */}
           <div className="lg:col-span-6 space-y-5">
             <div className="text-xs font-semibold uppercase tracking-widest text-earth-teal">
-              What We Offer
+              HOW WE SERVE
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark leading-tight tracking-tight">
@@ -84,7 +84,7 @@ export default function ImpactPillars({ pillars }: ImpactPillarsProps) {
                 href="/about"
                 className="btn-earth-primary"
               >
-                <span>More About Our Model</span>
+                <span>Learn About Our Mission</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
