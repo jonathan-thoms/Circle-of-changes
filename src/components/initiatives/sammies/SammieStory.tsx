@@ -52,10 +52,11 @@ export default function SammieStory() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
-              One 8-Year-Old Girl&apos;s Dream to End{' '}
-              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-                Loneliness
-              </span>
+              One 8-Year-Old Girl&apos;s{' '}
+              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase inline-block">
+                dream
+              </span>{' '}
+              to End Loneliness
             </h2>
 
             <p className="text-base sm:text-lg text-charcoal-ink/80 leading-relaxed">

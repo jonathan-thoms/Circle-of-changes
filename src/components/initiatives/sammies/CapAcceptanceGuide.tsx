@@ -36,10 +36,7 @@ export default function CapAcceptanceGuide() {
             Collection Guidelines &amp; Quality Control
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-            Acceptable vs. Unacceptable{' '}
-            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-              Bottle Caps
-            </span>
+            Acceptable vs. Unacceptable Bottle Caps
           </h2>
           <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
             To ensure the plastic can be safely shredded and molded by our remanufacturing partners, all items must be clean, dry, and under 8 inches in diameter.

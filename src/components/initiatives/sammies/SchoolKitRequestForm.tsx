@@ -32,10 +32,7 @@ export default function SchoolKitRequestForm() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold font-poppins text-white tracking-tight leading-[1.15]">
-              Request a School Drive{' '}
-              <span className="font-script text-earth-yellow font-normal text-4xl sm:text-6xl lowercase">
-                Starter Kit
-              </span>
+              Request a School Drive Starter Kit
             </h2>
 
             <p className="text-base sm:text-lg text-sand-beige/90 leading-relaxed">

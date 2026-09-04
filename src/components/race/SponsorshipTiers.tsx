@@ -118,10 +118,7 @@ export default function SponsorshipTiers() {
             Sponsorship Opportunities
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-            Sponsorship{' '}
-            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-              Packages &amp; Levels
-            </span>
+            Sponsorship Packages &amp; Levels
           </h2>
           <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
             Gain premier brand exposure, engage your employees with complimentary race entries, and demonstrate environmental leadership in front of hundreds of community members.

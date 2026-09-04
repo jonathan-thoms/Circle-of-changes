@@ -53,10 +53,10 @@ export default function FeaturedInitiatives({
               On the Frontlines of Change
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
-              Flagship Programs &amp; Partner{' '}
-              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-                Initiatives
-              </span>
+              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase inline-block mr-1">
+                flagship
+              </span>{' '}
+              Programs &amp; Partner Initiatives
             </h2>
             <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
               Discover how individuals, schools, and communities are joining together to protect our environment and build lasting connection.

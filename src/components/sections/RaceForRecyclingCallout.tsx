@@ -24,10 +24,10 @@ export default function RaceForRecyclingCallout() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white tracking-tight leading-[1.15]">
-              Race for Recycling 5K &amp;{' '}
-              <span className="font-script text-earth-yellow font-normal text-4xl sm:text-6xl lg:text-7xl lowercase">
-                Eco-Expo
-              </span>
+              <span className="font-script text-earth-coral font-normal text-4xl sm:text-6xl lg:text-7xl lowercase inline-block mr-1">
+                race
+              </span>{' '}
+              for Recycling 5K &amp; Eco-Expo
             </h2>
 
             <p className="text-base sm:text-lg text-sand-beige/90 leading-relaxed max-w-xl">

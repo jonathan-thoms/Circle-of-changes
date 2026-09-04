@@ -75,10 +75,7 @@ export default function ExclusiveSponsorships() {
             Targeted Activation Opportunities
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-            Exclusive Experience{' '}
-            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-              Sponsorships
-            </span>
+            Exclusive Experience Sponsorships
           </h2>
           <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
             Sponsor specific race-day experiences to connect your brand with active participants, families, and zero-waste community initiatives.

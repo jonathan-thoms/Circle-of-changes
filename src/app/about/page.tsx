@@ -65,10 +65,11 @@ export default async function AboutPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white tracking-tight max-w-3xl leading-tight">
-            Connecting People, Plastics &amp;{' '}
-            <span className="font-script text-earth-yellow font-normal text-5xl sm:text-6xl lg:text-7xl lowercase">
-              Public Spaces
+            Connecting{' '}
+            <span className="font-script text-earth-coral font-normal text-5xl sm:text-6xl lg:text-7xl lowercase inline-block">
+              people
             </span>
+            , Plastics &amp; Public Spaces
           </h1>
 
           <p className="text-base sm:text-xl text-white/90 max-w-2xl leading-relaxed">
@@ -143,10 +144,7 @@ export default async function AboutPage() {
               Guiding Principles
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-              Values Rooted in{' '}
-              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-                Action
-              </span>
+              Values Rooted in Action
             </h2>
             <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
               Every initiative we operate or support adheres to four non-profit benchmarks.

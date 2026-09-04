@@ -19,7 +19,10 @@ export interface HeroSlide {
     textClass?: string;
   };
   title: string;
-  titleHighlight: string;
+  titleHighlight?: string;
+  titleBefore?: string;
+  highlightWord?: string;
+  titleAfter?: string;
   scriptWord?: string;
   description: string;
   primaryCta: {
@@ -84,12 +87,6 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
 
   const currentSlide = slides[currentIndex];
 
-  // Script accent words per slide (EarthShare exact motif)
-  const scriptAccents: Record<string, string> = {
-    'circles-of-change-core': 'Together',
-    'sammies-buddy-bench': 'Inclusion',
-    'race-for-recycling-5k': 'Action',
-  };
 
   return (
     <section
@@ -122,13 +119,42 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl text-white space-y-6">
           
-          {/* ExtraBold Headline with EarthShare Yellow Script Word */}
+          {/* ExtraBold Headline with Special Orange Script Word */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white leading-[1.12] tracking-tight">
-            {currentSlide.title}{' '}
-            <span className="text-white">{currentSlide.titleHighlight}</span>{' '}
-            <span className="font-script text-earth-yellow font-bold text-4xl sm:text-6xl lg:text-7xl lowercase italic inline-block ml-1">
-              {scriptAccents[currentSlide.id] || 'Together'}
-            </span>
+            {currentSlide.highlightWord ? (
+              <>
+                {currentSlide.titleBefore}{' '}
+                <span className="font-script text-earth-coral font-normal text-4xl sm:text-6xl lg:text-7xl lowercase inline-block mx-1">
+                  {currentSlide.highlightWord}
+                </span>
+                {currentSlide.titleAfter ? ` ${currentSlide.titleAfter}` : ''}
+              </>
+            ) : currentSlide.id === 'circles-of-change-core' ? (
+              <>
+                Empowering Communities to Close the Circle of{' '}
+                <span className="font-script text-earth-coral font-normal text-4xl sm:text-6xl lg:text-7xl lowercase inline-block mx-1">
+                  sustainable
+                </span>{' '}
+                Change
+              </>
+            ) : currentSlide.id === 'sammies-buddy-bench' ? (
+              <>
+                Transforming Recycled Plastic Caps into Benches of{' '}
+                <span className="font-script text-earth-coral font-normal text-4xl sm:text-6xl lg:text-7xl lowercase inline-block ml-1">
+                  kindness
+                </span>
+              </>
+            ) : currentSlide.id === 'race-for-recycling-5k' ? (
+              <>
+                Lace Up for the Annual Race for{' '}
+                <span className="font-script text-earth-coral font-normal text-4xl sm:text-6xl lg:text-7xl lowercase inline-block mx-1">
+                  recycling
+                </span>{' '}
+                5K
+              </>
+            ) : (
+              currentSlide.title
+            )}
           </h1>
 
           {/* Clean, Concise 1-2 sentence description */}

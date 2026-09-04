@@ -28,12 +28,13 @@ export default function RaceHero() {
               <span>Inaugural Signature Event • May 16, 2026</span>
             </div>
 
-            {/* ExtraBold Headline with Yellow Script Accent */}
+            {/* ExtraBold Headline with Orange Script Accent */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-poppins text-white leading-[1.15] tracking-tight">
-              Lace Up for Sustainability at the Race for Recycling{' '}
-              <span className="font-script text-earth-yellow font-normal text-5xl sm:text-6xl lg:text-7xl lowercase inline-block">
-                5K &amp; Expo
-              </span>
+              Lace Up for{' '}
+              <span className="font-script text-earth-coral font-normal text-5xl sm:text-6xl lg:text-7xl lowercase inline-block">
+                sustainability
+              </span>{' '}
+              at the Race for Recycling 5K &amp; Expo
             </h1>
 
             {/* Description */}

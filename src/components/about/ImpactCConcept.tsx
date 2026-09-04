@@ -63,10 +63,7 @@ export default function ImpactCConcept() {
             Our Impact Framework
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-            The &ldquo;Impact C&rdquo;{' '}
-            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-              Framework
-            </span>
+            The &ldquo;Impact C&rdquo; Framework
           </h2>
           <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
             How individual micro-actions curve into collective power and close an unbroken loop of environmental and social renewal.

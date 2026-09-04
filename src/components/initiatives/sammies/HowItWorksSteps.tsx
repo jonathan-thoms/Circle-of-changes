@@ -57,10 +57,7 @@ export default function HowItWorksSteps() {
             The Step-by-Step Process
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight">
-            How a School Gets a{' '}
-            <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-              Buddy Bench
-            </span>
+            How a School Gets a Buddy Bench
           </h2>
           <p className="text-base sm:text-lg text-charcoal-ink/75 leading-relaxed">
             From empty juice bottles to playground infrastructure—our 4-stage circular workflow is simple, hands-on, and accessible to any school.

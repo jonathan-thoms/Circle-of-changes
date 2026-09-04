@@ -26,10 +26,7 @@ export default function InKindAndCustom() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
-              In-Kind Sponsorship{' '}
-              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lowercase">
-                Opportunities
-              </span>
+              In-Kind Sponsorship Opportunities
             </h2>
 
             <p className="text-base text-charcoal-ink/80 leading-relaxed">

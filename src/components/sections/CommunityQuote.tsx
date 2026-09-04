@@ -12,11 +12,15 @@ export default function CommunityQuote() {
         </div>
 
         <blockquote className="text-2xl sm:text-4xl md:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-snug">
-          &ldquo;When one person recycles a bottle cap, it is a thoughtful gesture. When an entire school unites to build a buddy bench, it becomes an unbroken circle of{' '}
-          <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl md:text-6xl inline-block">
-            kindness and sustainability
-          </span>
-          .&rdquo;
+          &ldquo;When one person recycles a bottle cap, it is a thoughtful gesture. When an entire school{' '}
+          <span className="font-script text-earth-coral font-normal text-3xl sm:text-5xl md:text-6xl inline-block lowercase">
+            unites
+          </span>{' '}
+          to build a buddy bench, it becomes an unbroken{' '}
+          <span className="font-script text-earth-coral font-normal text-3xl sm:text-5xl md:text-6xl inline-block lowercase">
+            circle
+          </span>{' '}
+          of kindness and sustainability.&rdquo;
         </blockquote>
 
         <div className="pt-4 flex flex-col items-center justify-center space-y-4">

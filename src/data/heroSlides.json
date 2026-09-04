@@ -7,8 +7,10 @@
       "icon": "Sparkles",
       "textClass": "text-sky-renewal"
     },
-    "title": "Empowering Communities to Close the Circle of",
-    "titleHighlight": "Sustainable Change",
+    "titleBefore": "Empowering Communities to Close the Circle of",
+    "highlightWord": "sustainable",
+    "titleAfter": "Change",
+    "title": "Empowering Communities to Close the Circle of Sustainable Change",
     "description": "Connecting grassroots eco-initiatives, youth leadership, and regional waste recovery into one unified circle of impact.",
     "primaryCta": {
       "text": "Explore Initiatives",
@@ -31,8 +33,10 @@
       "icon": "HeartHandshake",
       "textClass": "text-regen-mint"
     },
-    "title": "Transforming Recycled Plastic Caps into",
-    "titleHighlight": "Benches of Kindness",
+    "titleBefore": "Transforming Recycled Plastic Caps into Benches of",
+    "highlightWord": "kindness",
+    "titleAfter": "",
+    "title": "Transforming Recycled Plastic Caps into Benches of Kindness",
     "description": "Students collect plastic bottle caps that get remanufactured into 100% recycled benches, fostering schoolyard friendship.",
     "primaryCta": {
       "text": "Explore Sammie's Initiative",
@@ -55,8 +59,10 @@
       "icon": "Trophy",
       "textClass": "text-sky-renewal"
     },
-    "title": "Lace Up for the Annual",
-    "titleHighlight": "Race for Recycling 5K",
+    "titleBefore": "Lace Up for the Annual Race for",
+    "highlightWord": "recycling",
+    "titleAfter": "5K",
+    "title": "Lace Up for the Annual Race for Recycling 5K",
     "description": "Join thousands of runners and eco-advocates turning athletic miles into local plastic collection and community cleanups.",
     "primaryCta": {
       "text": "Race 5K & Sponsors",

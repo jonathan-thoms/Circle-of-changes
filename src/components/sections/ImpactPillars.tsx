@@ -41,10 +41,11 @@ export default function ImpactPillars({ pillars }: ImpactPillarsProps) {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark leading-tight tracking-tight">
-              Empowering the Future of{' '}
+              Empowering the{' '}
               <span className="font-script text-earth-coral text-4xl sm:text-5xl lg:text-6xl font-normal lowercase inline-block">
-                Our Communities
-              </span>
+                future
+              </span>{' '}
+              of Our Communities
             </h2>
 
             <p className="text-base sm:text-lg text-charcoal-ink/80 leading-relaxed">

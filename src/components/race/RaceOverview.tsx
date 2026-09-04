@@ -42,10 +42,11 @@ export default function RaceOverview() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
-              A Celebration of Sustainability, Health &amp;{' '}
-              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase">
-                Community
-              </span>
+              A{' '}
+              <span className="font-script text-earth-coral font-normal text-4xl sm:text-5xl lg:text-6xl lowercase inline-block">
+                celebration
+              </span>{' '}
+              of Sustainability, Health &amp; Community
             </h2>
 
             <p className="text-base sm:text-lg text-charcoal-ink/80 leading-relaxed">
