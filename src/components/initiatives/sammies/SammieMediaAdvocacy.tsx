@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { BookOpen, Radio, Award, Tv, Star, ArrowRight } from 'lucide-react';
+import { BookOpen, Radio, Award, Tv, Star, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function SammieMediaAdvocacy() {
   const mediaOutlets = [
@@ -63,13 +63,19 @@ export default function SammieMediaAdvocacy() {
             </div>
 
             {/* Podcast Callout */}
-            <div className="p-6 rounded-xl bg-earth-canvas flex items-center justify-between gap-4">
+            <a
+              href="https://podcasts.apple.com/us/podcast/sammie-smiles/id1536338801"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Listen to Sammie Smiles Podcast on Apple Podcasts"
+              className="group p-6 rounded-xl bg-earth-canvas hover:bg-[#EAECEF] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer active:scale-98"
+            >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-earth-teal shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-earth-teal shadow-sm group-hover:scale-105 group-hover:text-earth-dark transition-all duration-200">
                   <Radio className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-earth-dark font-poppins">
+                  <div className="text-sm font-bold text-earth-dark font-poppins group-hover:text-earth-teal transition-colors">
                     Sammie Smiles Podcast
                   </div>
                   <div className="text-xs text-charcoal-ink/70">
@@ -77,10 +83,11 @@ export default function SammieMediaAdvocacy() {
                   </div>
                 </div>
               </div>
-              <span className="text-xs font-bold text-earth-teal hidden sm:inline-block">
-                Listen Online →
-              </span>
-            </div>
+              <div className="flex items-center gap-1.5 text-xs font-bold text-earth-teal group-hover:text-earth-dark group-hover:translate-x-0.5 transition-all">
+                <span>Listen Online</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </div>
+            </a>
           </div>
 
           {/* Right Column: Media Badges (5 Cols) */}
