@@ -125,14 +125,9 @@ export default function PartnerEcosystem({
                     key={item.name}
                     className="p-4 rounded-xl bg-earth-canvas space-y-1 hover:bg-[#EAECEF] transition-colors"
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-earth-dark font-poppins">
-                        {item.name}
-                      </span>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white text-earth-teal uppercase">
-                        {item.status}
-                      </span>
-                    </div>
+                    <h4 className="text-sm font-bold text-earth-dark font-poppins">
+                      {item.name}
+                    </h4>
                     <p className="text-xs text-charcoal-ink/70">
                       {item.focus}
                     </p>
