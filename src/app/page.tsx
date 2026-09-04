@@ -1,7 +1,7 @@
 import React from 'react';
 import { getHeroSlides, getFeaturedInitiatives } from '@/lib/api';
 import HeroSlider from '@/components/sections/HeroSlider';
-// import ImpactPillars from '@/components/sections/ImpactPillars';
+import ImpactPillars from '@/components/sections/ImpactPillars';
 import FeaturedInitiatives from '@/components/sections/FeaturedInitiatives';
 import RaceForRecyclingCallout from '@/components/sections/RaceForRecyclingCallout';
 import CommunityQuote from '@/components/sections/CommunityQuote';
@@ -17,8 +17,8 @@ export default async function HomePage() {
       {/* 1. Multi-Slide Interactive Hero Slider (Auto 7s, pause on hover, 3 slides) */}
       <HeroSlider slides={heroSlides} />
 
-      {/* 2. Impact Pillars Section (Hidden for now per request) */}
-      {/* <ImpactPillars pillars={impactPillars} /> */}
+      {/* 2. How We Serve Section */}
+      <ImpactPillars />
 
       {/* 3. Featured Initiatives Grid */}
       <FeaturedInitiatives initiatives={featuredInitiatives} />
