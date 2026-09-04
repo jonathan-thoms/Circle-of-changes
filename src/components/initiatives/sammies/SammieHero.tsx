@@ -23,21 +23,15 @@ export default function SammieHero() {
           {/* Left Column: Narrative & Dedicated Logo (8 Cols) */}
           <div className="lg:col-span-8 space-y-6 text-white">
             
-            {/* Dedicated Sub-Brand Logo Badge */}
-            <div className="inline-flex items-center gap-3 p-3 bg-white rounded-xl shadow-lg border border-white/20 backdrop-blur-md">
-              <div className="relative w-44 h-12">
-                <Image
-                  src="/images/sammies-logo-horizontal.png"
-                  alt="Sammie's Circles of Change"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <div className="h-6 w-px bg-charcoal-ink/20" />
-              <span className="text-xs font-bold uppercase tracking-wider text-earth-teal pr-2">
-                Flagship Partner
-              </span>
+            {/* Dedicated Sub-Brand Logo (White) */}
+            <div className="relative w-64 sm:w-72 h-16 sm:h-20 drop-shadow-md">
+              <Image
+                src="/images/Sammie_s COC-White.png"
+                alt="Sammie's Circles of Change"
+                fill
+                className="object-contain object-left"
+                priority
+              />
             </div>
 
             {/* ExtraBold Headline with Yellow Script Accent */}
