@@ -38,7 +38,7 @@ export default function RaceOverview() {
           {/* Right Column: Narrative from Prospectus (6 Cols) */}
           <div className="lg:col-span-6 space-y-6">
             <div className="text-xs font-semibold uppercase tracking-widest text-earth-teal">
-              Partner With Us
+              About Race for Recycling
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
@@ -54,8 +54,12 @@ export default function RaceOverview() {
             </p>
 
             <p className="text-base sm:text-lg text-charcoal-ink/80 leading-relaxed">
-              Together, we can inspire positive environmental action while investing in a healthier, stronger, and more resilient community.
+              Together, we can inspire positive environmental action while investing in a healthier, stronger community.
             </p>
+
+            <div className="p-4 rounded-xl bg-earth-canvas border-l-4 border-earth-teal text-sm font-semibold text-earth-dark font-poppins">
+              The race will take place on April 17, 2027 inside Fair Park in Dallas, Texas.
+            </div>
 
             {/* Value Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-charcoal-ink/10">

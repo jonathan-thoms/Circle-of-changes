@@ -50,12 +50,17 @@ export default function SponsorPledgeForm() {
             {/* Direct Contact Info */}
             <div className="p-6 rounded-2xl bg-white/10 border border-white/15 space-y-3">
               <div className="text-xs font-bold uppercase tracking-wider text-earth-yellow">
-                Sponsorship Relations Office
+                Sponsorship Inquiries
               </div>
               <div className="text-sm font-semibold text-white space-y-1">
-                <div>Circles of Change 501(c)(3)</div>
-                <div className="text-sand-beige/80">Phone: (317) 555-0199</div>
-                <div className="text-sand-beige/80">Email: sponsorships@circlesofchange.org</div>
+                <div className="text-base font-bold text-white font-poppins">Sherry Lambe</div>
+                <div className="text-sand-beige/90">Circles of Change</div>
+                <div className="text-sand-beige/90">
+                  Email:{' '}
+                  <a href="mailto:slambe@circlesofchange.net" className="text-earth-yellow hover:underline">
+                    slambe@circlesofchange.net
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -101,7 +106,7 @@ export default function SponsorPledgeForm() {
                   <p className="text-sm text-charcoal-ink/80 leading-relaxed max-w-md mx-auto">
                     {activeMode === 'sponsor'
                       ? `Thank you, ${formData.contactName || formData.companyName}. Our race coordinator will contact you at ${formData.email} to confirm logo deliverables, signage specs, and complimentary runner promo codes.`
-                      : `Thank you, ${formData.runnerName}. Your race entry and pledge of ${formData.recyclingPledge} have been secured for May 16, 2026.`}
+                      : `Thank you, ${formData.runnerName}. Your race entry and pledge of ${formData.recyclingPledge} have been secured for April 17, 2027 at Fair Park in Dallas, Texas.`}
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -182,35 +187,35 @@ export default function SponsorPledgeForm() {
                       onChange={(e) => setFormData({ ...formData, sponsorshipTier: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-md bg-white text-earth-dark text-sm focus:outline-none focus:ring-2 focus:ring-earth-yellow"
                     >
-                      <option value="Presenting Sponsor — $10,000 (15 Entries, Title Naming)">
-                        Presenting Sponsor — $10,000 (Exclusive Title Naming)
+                      <option value="Presenting Sponsor — $10,000 (Exclusive | One Available)">
+                        Presenting Sponsor — $10,000 (Exclusive | One Available)
                       </option>
-                      <option value="Gold Sponsor — $5,000 (10 Entries)">
-                        Gold Sponsor — $5,000 (10 Free Entries)
+                      <option value="Gold Sponsor — $5,000 (Two Available • 10 Entries)">
+                        Gold Sponsor — $5,000 (Two Available • 10 Entries)
                       </option>
-                      <option value="Silver Sponsor — $2,500 (6 Entries)">
-                        Silver Sponsor — $2,500 (6 Free Entries)
+                      <option value="Silver Sponsor — $2,500 (Four Available • 6 Entries)">
+                        Silver Sponsor — $2,500 (Four Available • 6 Entries)
                       </option>
                       <option value="Bronze Sponsor — $1,000 (4 Entries)">
-                        Bronze Sponsor — $1,000 (4 Free Entries)
+                        Bronze Sponsor — $1,000 (4 Entries)
                       </option>
                       <option value="Community Sponsor — $500 (2 Entries)">
-                        Community Sponsor — $500 (2 Free Entries)
+                        Community Sponsor — $500 (2 Entries)
                       </option>
-                      <option value="Community Recycling Challenge Sponsor — $2,500">
-                        Exclusive: Community Recycling Challenge Sponsor — $2,500
+                      <option value="Community Recycling Challenge Sponsor — $2,500 (Exclusive)">
+                        Community Recycling Challenge Sponsor — $2,500 (Exclusive)
                       </option>
-                      <option value="Post-Race Breakfast Sponsor — $750">
-                        Exclusive: Breakfast Sponsor — $750
+                      <option value="Breakfast Sponsor — $750 (Exclusive)">
+                        Breakfast Sponsor — $750 (Exclusive)
                       </option>
-                      <option value="Awards Ceremony Sponsor — $500">
-                        Exclusive: Awards Ceremony Sponsor — $500
+                      <option value="Awards Sponsor — $500 (Exclusive)">
+                        Awards Sponsor — $500 (Exclusive)
                       </option>
-                      <option value="Water Station Sponsor — $250">
-                        Hydration Water Station Sponsor — $250
+                      <option value="Water Sponsor — $250 (Four Available)">
+                        Water Sponsor — $250 (Four Available)
                       </option>
-                      <option value="In-Kind / Custom Collaboration">
-                        In-Kind Donation / Custom Collaboration Inquiry
+                      <option value="In-Kind / Custom Sponsorship Inquiry">
+                        In-Kind / Custom Sponsorship Inquiry
                       </option>
                     </select>
                   </div>

@@ -25,7 +25,7 @@ export default function RaceHero() {
             {/* Category Eyebrow Badge */}
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-sky-renewal">
               <Trophy className="w-4 h-4 text-earth-yellow" />
-              <span>Inaugural Signature Event • May 16, 2026</span>
+              <span>5K for the Planet • April 17, 2027 • Fair Park, Dallas, Texas</span>
             </div>
 
             {/* ExtraBold Headline with Orange Script Accent */}
@@ -34,12 +34,12 @@ export default function RaceHero() {
               <span className="font-script text-earth-coral font-normal text-5xl sm:text-6xl lg:text-7xl lowercase inline-block">
                 sustainability
               </span>{' '}
-              at the Race for Recycling 5K &amp; Expo
+              at the Race for Recycling 5K
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-xl text-white/90 font-normal leading-relaxed max-w-2xl">
-              A community-wide celebration of environmental stewardship, healthy living, and circular infrastructure. Join hundreds of runners and corporate leaders turning athletic miles into clean polymer recovery.
+              A community-wide celebration of sustainability, environmental stewardship, and healthy living. Join runners, families, and corporate leaders turning athletic miles into tangible environmental action.
             </p>
 
             {/* Action Buttons */}
@@ -74,8 +74,8 @@ export default function RaceHero() {
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-white font-poppins text-base">Saturday, May 16, 2026</div>
-                  <div className="text-xs text-sand-beige/80">8:00 AM Race Start • 9:30 AM Awards</div>
+                  <div className="font-bold text-white font-poppins text-base">Saturday, April 17, 2027</div>
+                  <div className="text-xs text-sand-beige/80">Fair Park • Dallas, Texas</div>
                 </div>
               </div>
 
@@ -84,8 +84,8 @@ export default function RaceHero() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-white font-poppins text-base">Riverside Park Promenade</div>
-                  <div className="text-xs text-sand-beige/80">Certified 5K Course &amp; Virtual Run</div>
+                  <div className="font-bold text-white font-poppins text-base">Fair Park, Dallas</div>
+                  <div className="text-xs text-sand-beige/80">Historic Fair Park 5K Course</div>
                 </div>
               </div>
 
@@ -94,8 +94,8 @@ export default function RaceHero() {
                   <Recycle className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-white font-poppins text-base">15+ Tons Target</div>
-                  <div className="text-xs text-sand-beige/80">Bottle caps &amp; rigid plastics diverted</div>
+                  <div className="font-bold text-white font-poppins text-base">5K for the Planet</div>
+                  <div className="text-xs text-sand-beige/80">Community recycling &amp; zero-waste event</div>
                 </div>
               </div>
             </div>

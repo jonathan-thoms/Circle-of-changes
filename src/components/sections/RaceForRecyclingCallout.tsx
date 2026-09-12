@@ -42,7 +42,7 @@ export default function RaceForRecyclingCallout() {
                   <Calendar className="w-3.5 h-3.5" />
                   <span>Date</span>
                 </div>
-                <div className="text-sm font-bold text-white font-poppins">May 16, 2026</div>
+                <div className="text-sm font-bold text-white font-poppins">April 17, 2027</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
@@ -50,15 +50,15 @@ export default function RaceForRecyclingCallout() {
                   <MapPin className="w-3.5 h-3.5" />
                   <span>Location</span>
                 </div>
-                <div className="text-sm font-bold text-white font-poppins">Riverside Park</div>
+                <div className="text-sm font-bold text-white font-poppins">Fair Park • Dallas</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
                 <div className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-sky-renewal font-medium">
                   <Recycle className="w-3.5 h-3.5" />
-                  <span>Target</span>
+                  <span>Tagline</span>
                 </div>
-                <div className="text-sm font-bold text-white font-poppins">15 Tons Diverted</div>
+                <div className="text-sm font-bold text-white font-poppins">5K for the Planet</div>
               </div>
             </div>
 
@@ -102,7 +102,7 @@ export default function RaceForRecyclingCallout() {
                     Pledge Confirmed!
                   </h4>
                   <p className="text-sm text-charcoal-ink/80 leading-relaxed">
-                    Thank you for pledging <strong>{pledgePounds} lbs</strong> of recyclables. Your registration slot is secured for May 16, 2026.
+                    Thank you for pledging <strong>{pledgePounds} lbs</strong> of recyclables. Your registration slot is secured for April 17, 2027 at Fair Park in Dallas, Texas.
                   </p>
                   <button
                     onClick={() => setPledged(false)}

@@ -7,15 +7,15 @@ export default function SponsorshipMatrix() {
   const rows = [
     { benefit: 'Recognition on Event Website', community: true, bronze: true, silver: true, gold: true, presenting: true },
     { benefit: 'Social Media Recognition', community: false, bronze: true, silver: true, gold: true, presenting: true },
-    { benefit: 'Event Signage Along 5K Course', community: false, bronze: true, silver: true, gold: true, presenting: true },
-    { benefit: 'Vendor Booth Space at Finish Expo', community: false, bronze: true, silver: true, gold: true, presenting: true },
-    { benefit: 'Promotional Item in Runner Swag Bag', community: false, bronze: false, silver: true, gold: true, presenting: true },
+    { benefit: 'Event Signage', community: false, bronze: true, silver: true, gold: true, presenting: true },
+    { benefit: 'Vendor Booth', community: false, bronze: true, silver: true, gold: true, presenting: true },
+    { benefit: 'Promotional Item in Swag Bag', community: false, bronze: false, silver: true, gold: true, presenting: true },
     { benefit: 'Logo on Participant Race Shirt', community: false, bronze: false, silver: true, gold: true, presenting: true },
     { benefit: 'Complimentary Race Registrations', community: '2', bronze: '4', silver: '6', gold: '10', presenting: '15' },
     { benefit: 'Recognition During Opening Ceremony', community: false, bronze: false, silver: false, gold: true, presenting: true },
     { benefit: 'Opportunity to Welcome Participants', community: false, bronze: false, silver: false, gold: false, presenting: true },
     { benefit: 'Featured Press & Media Recognition', community: false, bronze: false, silver: false, gold: false, presenting: true },
-    { benefit: 'Event Naming Rights (Title Sponsor)', community: false, bronze: false, silver: false, gold: false, presenting: true },
+    { benefit: 'Event Naming Rights', community: false, bronze: false, silver: false, gold: false, presenting: true },
     { benefit: 'First Right of Refusal for Following Year', community: false, bronze: false, silver: false, gold: false, presenting: true },
   ];
 

@@ -5,12 +5,14 @@ import { Package, Utensils, Printer, Shield, Sparkles, HeartHandshake, ArrowRigh
 
 export default function InKindAndCustom() {
   const inKindExamples = [
-    { title: 'Bottled Water & Hydration', icon: Package, desc: 'Spring water or compostable hydration cups for runner stations' },
-    { title: 'Healthy Snacks & Fuel', icon: Utensils, desc: 'Bananas, energy bars, bagels, and post-race refreshments' },
-    { title: 'Printing & Signage Services', icon: Printer, desc: 'Course directional signage, bibs, and event banners' },
-    { title: 'Equipment & Medical Support', icon: Shield, desc: 'First aid supplies, finish line sound gear, and volunteer tents' },
-    { title: 'Awards & Swag Items', icon: Sparkles, desc: 'Medals, zero-waste prizes, and runner goodie bag merchandise' },
-    { title: 'Recycling Collection Gear', icon: HeartHandshake, desc: 'Heavy-duty sorting bags, digital hanging scales, and bins' },
+    { title: 'Bottled Water', icon: Package },
+    { title: 'Healthy Snacks & Refreshments', icon: Utensils },
+    { title: 'Printing Services', icon: Printer },
+    { title: 'Event Equipment', icon: Shield },
+    { title: 'Medical Support', icon: Shield },
+    { title: 'Volunteer Meals', icon: Utensils },
+    { title: 'Awards & Giveaways', icon: Sparkles },
+    { title: 'Recycling Supplies', icon: HeartHandshake },
   ];
 
   return (
@@ -26,26 +28,36 @@ export default function InKindAndCustom() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold font-poppins text-earth-dark tracking-tight leading-tight">
-              In-Kind Sponsorship Opportunities
+              In-Kind Sponsorships
             </h2>
 
             <p className="text-base text-charcoal-ink/80 leading-relaxed">
-              Businesses interested in supporting the event through donated products or professional services are encouraged to participate as In-Kind Sponsors. Recognition will be matched to equivalent financial sponsorship tiers based on the fair market value of the donation.
+              Businesses interested in supporting the event through donated products or services are encouraged to participate as In-Kind Sponsors.
             </p>
 
             {/* Examples Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {inKindExamples.map((item) => (
-                <div key={item.title} className="p-4 rounded-xl bg-earth-canvas space-y-1.5 border border-charcoal-ink/5">
-                  <div className="flex items-center gap-2 text-earth-teal font-bold text-sm font-poppins">
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.title}</span>
+            <div className="space-y-3">
+              <div className="text-xs font-bold uppercase tracking-wider text-earth-dark font-poppins">
+                Examples Include:
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {inKindExamples.map((item) => (
+                  <div key={item.title} className="p-3.5 rounded-xl bg-earth-canvas flex items-center gap-3 border border-charcoal-ink/5">
+                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-earth-teal shadow-xs flex-shrink-0">
+                      <item.icon className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-semibold text-earth-dark">{item.title}</span>
                   </div>
-                  <p className="text-xs text-charcoal-ink/70 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Official Deck Note Callout */}
+            <div className="p-4 rounded-xl bg-earth-canvas border-l-4 border-earth-yellow text-xs text-charcoal-ink/80 leading-relaxed space-y-1">
+              <span className="font-bold text-earth-dark uppercase tracking-wider block">Note:</span>
+              <p>
+                Recognition for In-Kind Sponsors will be determined based on the fair market value of the contribution and may include website recognition, event signage, social media recognition, and additional promotional opportunities.
+              </p>
             </div>
           </div>
 
@@ -54,30 +66,43 @@ export default function InKindAndCustom() {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-earth-yellow">
                 <HelpCircle className="w-4 h-4" />
-                <span>Tailored ESG Programs</span>
+                <span>Tailored Partnerships</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold font-poppins text-white leading-tight">
                 Custom Sponsorship Opportunities
               </h3>
 
+              <div className="text-sm font-bold text-sand-beige">
+                Interested in creating something unique?
+              </div>
+
               <p className="text-sm text-white/85 leading-relaxed">
-                Interested in creating something unique? We are happy to customize sponsorship opportunities that align with your organization&apos;s corporate social responsibility (CSR) and marketing goals while advancing community plastic reduction.
+                We are happy to customize sponsorship opportunities that align with your organization&apos;s marketing goals while supporting the mission of the Race for Recycling 5K.
               </p>
             </div>
 
-            <div className="pt-4 border-t border-white/15 space-y-3">
-              <div className="text-xs text-sand-beige/90">
-                Contact our executive sponsorship director directly:
+            <div className="pt-6 border-t border-white/15 space-y-4">
+              <div className="space-y-1">
+                <div className="text-xs uppercase tracking-wider text-sand-beige/90 font-semibold">
+                  For sponsorship inquiries, please contact:
+                </div>
+                <div className="text-base font-bold text-white font-poppins">
+                  Sherry Lambe
+                </div>
+                <a
+                  href="mailto:slambe@circlesofchange.net"
+                  className="text-sm font-bold text-earth-yellow hover:underline block"
+                >
+                  slambe@circlesofchange.net
+                </a>
               </div>
-              <div className="text-sm font-bold text-earth-yellow">
-                partnership@circlesofchange.org
-              </div>
+
               <a
                 href="#sponsor-pledge-form"
                 className="w-full py-3 px-4 rounded-md bg-earth-yellow hover:bg-[#FFE033] text-earth-dark font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
-                <span>Inquire About Custom Package</span>
+                <span>Inquire About Sponsorship</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

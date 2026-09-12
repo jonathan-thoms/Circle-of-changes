@@ -9,21 +9,23 @@ import InKindAndCustom from '@/components/race/InKindAndCustom';
 import SponsorPledgeForm from '@/components/race/SponsorPledgeForm';
 
 export const metadata: Metadata = {
-  title: 'Race for Recycling 5K & Sponsorship Opportunities | Circles of Change',
+  title: 'Race for Recycling 5K — 5K for the Planet | Sponsorship Opportunities',
   description:
-    'Partner with the Race for Recycling 5K as a sponsor or runner. Explore corporate sponsorship packages ($500 to $10,000 title sponsorship), exclusive challenge sponsorships, in-kind options, and participant registration.',
+    'Join the Race for Recycling 5K on April 17, 2027 at Fair Park in Dallas, Texas. Explore corporate sponsorship packages ($500 to $10,000 title sponsorship), exclusive challenge sponsorships, in-kind opportunities, and runner registration.',
   keywords: [
     'Race for Recycling 5K',
+    '5K for the Planet',
+    'Fair Park Dallas 5K',
+    'Dallas Recycling Run',
     '5K Sponsorship Opportunities',
-    'Green 5K Event',
     'Corporate Sponsorship Packages',
     'Community Recycling Challenge',
     'Circles of Change 5K',
   ],
   openGraph: {
-    title: 'Race for Recycling 5K & Sponsorship Packages | Circles of Change',
+    title: 'Race for Recycling 5K — 5K for the Planet | Circles of Change',
     description:
-      'Lace up for sustainability. Partner with the inaugural Race for Recycling 5K to gain premier corporate visibility and support local plastic upcycling.',
+      'Lace up for sustainability on April 17, 2027 at Fair Park in Dallas, Texas. Partner with the Race for Recycling 5K to gain premier corporate visibility and support environmental stewardship.',
     type: 'website',
     images: ['/images/hero-race-5k.jpg'],
   },
